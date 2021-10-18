@@ -17,5 +17,9 @@ require_once('header.php');
     <br><br>
     <input type="submit" name="boton" value="Administracio">
 </form>
+
+<?php
+require_once('foother.php');
+?>
 </body>
 </html>

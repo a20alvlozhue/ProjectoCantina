@@ -1,5 +1,11 @@
 <html>
 <head>
+
+    <?php
+    require_once('header.php');
+    ?>
+
+
     <title>Inici</title>
 </head>
 <body>
