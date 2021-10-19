@@ -4,10 +4,10 @@
 <style>
 
     header.page-header {
-        background: no-repeat left/cover url(https://colorazul.top/wp-content/uploads/2020/04/Azul-claro.jpg);
+        background: no-repeat left/cover url(https://www.venecianasonline.es/wp-content/uploads/2018/06/azul-claro-c6e2ff.png);
         display: flex;
-        height: 30px;
-        min-width: 30px;
+        height: 120px;
+        min-width: 120px;
         align-items: center;
         color: #fff;
         text-shadow: #000 0 0 .2em;
@@ -25,7 +25,7 @@
 
 </style>
 <header class="page-header">
-    <h1></h1>
+    <h1>Cantina</h1>
 </header>
 
 
