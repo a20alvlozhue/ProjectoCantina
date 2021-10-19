@@ -16,15 +16,17 @@
     <input type="submit" name="boton" value="🡨">
 </form>
 <?php
+    $data = file_get_contents("menu.json");
+    $menuMati = json_decode($data, true);
+    foreach ($menuMati as $prod) {
+        echo $prod["nom"]."."$prod["preu"].'€'.$prod["torn"];
+        echo "<img src='".$prod["img"]."'></br>";
 
-    $bocata = bocata("Jamon", "Queso");
-    var_dump($bocata);
-    for ($i=0;$i<2;$i++){
+    }   
+        
+?>
 
-        $HTML= "<ul>"+$bocata+"</ul>";
-
-    }
-
+<?php
 require_once('foother.php');
 ?>
 
