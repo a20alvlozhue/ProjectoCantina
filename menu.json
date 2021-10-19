@@ -1,0 +1,26 @@
+var menu = [{
+
+    "nom":"Entrepa1",
+    "torn":"mati",
+    "preu":"2.90",
+}
+{
+
+    "nom":"Entrepa2",
+    "torn":"mati",
+    "preu":"2.90",
+}
+{
+
+    "nom":"Entrepa3",
+    "torn":"mati",
+    "preu":"2.90",
+}
+{
+
+    "nom":"Entrepa4",
+    "torn":"mati",
+    "preu":"2.90",
+}
+
+]
