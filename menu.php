@@ -18,18 +18,18 @@
 <?php
     $data = file_get_contents("menu.json");
     $menuMati = json_decode($data, true);
-    foreach ($menuMati as $prod) {
-        echo $prod["nom"]."."$prod["preu"].'€'.$prod["torn"];
-        echo "<img src='".$prod["img"]."'></br>";
-
-    }   
+    foreach ($menuMati as $prod){
+        echo $prod["nom"]."  </br>".$prod["preu"]."€ </br>".$prod["torn"];
+        echo "<img src=".$prod["img"]."></br>";
         
+    }
+
+
 ?>
 
 <?php
 require_once('foother.php');
 ?>
-
 </body>
 
 </html>
