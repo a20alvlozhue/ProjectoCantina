@@ -1,25 +1,25 @@
 [{
 
-    "nom": "Entrepa1",
+    "nom": "Entrepa Bacon + Formatge",
     "torn": "mati",
     "preu": "2.90",
-    "img": "img/bocata.jpg"
+    "img": "img/bq.jpg"
   }, {
   
-    "nom": "Entrepa2",
+    "nom": "Entrepa Pernil",
     "torn": "mati",
     "preu": "2.90",
-    "img": "img/bocata.jpg"
+    "img": "img/jamo.jpg"
   }, {
   
-    "nom": "Entrepa3",
+    "nom": "Entrepa Tonyina",
     "torn": "mati",
     "preu": "2.90",
-    "img": "img/bocata.jpg"
+    "img": "img/mixto.jpg"
   }, {
   
-    "nom": "Entrepa4",
+    "nom": "Entrepa Sal",
     "torn": "mati",
     "preu": "2.90",
-    "img": "img/bocata.jpg"
+    "img": "img/vegetal.jpg"
   }]

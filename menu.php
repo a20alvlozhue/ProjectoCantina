@@ -7,9 +7,21 @@
 
     <title>Inici</title>
 </head>
-<body>
-<h1>Menu</h1>
 
+<style>
+
+    .h1menu{
+        color: black;
+    }
+
+    .abajo{
+        text-align: center;
+    }
+
+
+</style>
+<body>
+<h1 class="h1menu">Menu</h1>
 
 <?php
     $data = file_get_contents("package.json");
@@ -19,16 +31,18 @@
         echo "<img src=".$prod["img"]." width='100px'></br>";
         
     }
-
-
 ?>
-<form action="comandav.php">
-    <input type="submit" name="boton" value="Validació comanda">
-</form>
 
-<form action="inici.php">
-    <input type="submit" name="boton" value="🡨">
-</form>
+<div class="abajo">
+    <form action="comandav.php">
+        <input type="submit" name="boton" value="Validació comanda">
+    </form>
+
+    <form action="inici.php">
+        <input type="submit" name="boton" value="🡨">
+    </form>
+</div>
+
 <?php
 require_once('foother.php');
 ?>
