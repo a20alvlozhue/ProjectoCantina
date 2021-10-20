@@ -64,7 +64,7 @@ if( isset( $_COOKIE["Limitador"]) )
 else {
     echo "No existe, puede continuar";
 }
-
+?>
 
 <div id="cuadricula">
 <div class="item" style="--color:#2D9BE8;"><h3><b><u>Bocatas Freds</u></b></h3></div>
