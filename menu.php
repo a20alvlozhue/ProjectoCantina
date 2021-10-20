@@ -24,7 +24,7 @@
 <h1 class="h1menu">Menu</h1>
 
 <?php
-    $data = file_get_contents("package.json");
+    $data = file_get_contents("menu.json");
     $menuMati = json_decode($data, true);
     foreach ($menuMati as $prod){
         echo $prod["nom"]." </br>".$prod["preu"]."€ </br>";
