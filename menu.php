@@ -124,7 +124,15 @@ else {
 
 <div class="abajo">
     <form action="comandav.php">
-        <input type="submit" name="boton" value="Validació comanda">
+        <input type="submit" name="boton" value="Validació comanda"
+            <?php
+            if ($limitadores==1){
+            ?>
+            disabled
+            <?php
+            }else{
+            }
+            ?>>
     </form>
 
     <form action="inici.php">
