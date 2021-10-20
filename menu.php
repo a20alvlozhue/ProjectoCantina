@@ -38,6 +38,7 @@
   background-color: #3E989B;
   background-color: var(--color);
   text-align: center;
+  font-family: Courier New;
 }
 
 .item:nth-child(5){
@@ -55,12 +56,12 @@ body {
 <h1 class="h1menu">Menu</h1>
 
 <div id="cuadricula">
-<div class="item" style="--color:#2D9BE8;"><p>Bocatas Freds</p></div>
-<div class="item" style="--color:#2D9BE8;"><p>Bocatas Calents</p></div>
-<div class="item" style="--color:#2D9BE8;"><p>Bocatas Vegetarians</p></div>
+<div class="item" style="--color:#2D9BE8;"><h3><b><u>Bocatas Freds</u></b></h3></div>
+<div class="item" style="--color:#2D9BE8;"><h3><b><u>Bocatas Calents</u></b></h3></div>
+<div class="item" style="--color:#2D9BE8;"><h3><b><u>Bocatas Vegetarians</u></b></h3></div>
 <div class="item" style="--color:#6FD0EA;"><p>
 <?php
-    $data = file_get_contents("menuM.json");
+    $data = file_get_contents("MenuM.json");
     $menuMati = json_decode($data, true);
     foreach ($menuMati as $prod){
         echo $prod["nom"]." </br>".$prod["preu"]."€ </br>";
@@ -72,9 +73,10 @@ body {
 </p></div>
 
 
+
 <div class="item" style="--color:#6FD0EA;"><p>
 <?php
-    $data = file_get_contents("menuM.json");
+    $data = file_get_contents("MenuM.json");
     $menuMati = json_decode($data, true);
     foreach ($menuMati as $prod){
         echo $prod["nom"]." </br>".$prod["preu"]."€ </br>";
@@ -90,7 +92,7 @@ body {
 
 <div class="item" style="--color:#6FD0EA;"><p>
 <?php
-    $data = file_get_contents("menuM.json");
+    $data = file_get_contents("MenuM.json");
     $menuMati = json_decode($data, true);
     foreach ($menuMati as $prod){
         echo $prod["nom"]." </br>".$prod["preu"]."€ </br>";
