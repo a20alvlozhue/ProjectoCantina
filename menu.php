@@ -77,8 +77,9 @@ else {
     foreach ($menuMati as $prod){
         echo $prod["nom"]." </br>".$prod["preu"]."€ </br>";
         echo "<img src=".$prod["img"]." width='100px'></br>";
-        echo "<button>+</button>";
-        echo "<button>-</button></br>";
+        echo "<input type='button' value='-' class='afegir'></input>";
+        echo "<input type='text' value='0' id='i'>";
+        echo "<input type='button' value='+' class='treure'></input></br>";
     }
 ?>
 </p></div>
@@ -92,8 +93,9 @@ else {
     foreach ($menuMati as $prod){
         echo $prod["nom"]." </br>".$prod["preu"]."€ </br>";
         echo "<img src=".$prod["img"]." width='100px'></br>";
-        echo "<button>+</button>";
-        echo "<button>-</button></br>";
+        echo "<input type='button' value='-' class='afegir'></input>";
+        echo "<input type='text' value='0' id='i'>";
+        echo "<input type='button' value='+' class='treure'></input></br>";
     }
 ?>
        
@@ -108,8 +110,9 @@ else {
     foreach ($menuMati as $prod){
         echo $prod["nom"]." </br>".$prod["preu"]."€ </br>";
         echo "<img src=".$prod["img"]." width='100px'></br>";
-        echo "<button>+</button>";
-        echo "<button>-</button></br>";
+        echo "<input type='button' value='-' class='afegir'></input>";
+        echo "<input type='text' value='0' id='i'>";
+        echo "<input type='button' value='+' class='treure'></input></br>";
     }
 ?>
 </p></div>
