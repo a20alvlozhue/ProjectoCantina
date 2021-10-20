@@ -1,25 +1,29 @@
 [{
 
-    "nom": "Entrepa Bacon + Formatge",
+    "nom": "Pernil salat",
     "torn": "mati",
     "preu": "2.90",
-    "img": "img/bq.jpg"
+    "img": "img/jamo.jpg",
+    "tipus": "fred"
   }, {
   
-    "nom": "Entrepa Pernil",
+    "nom": "Formatge",
     "torn": "mati",
     "preu": "2.90",
-    "img": "img/jamo.jpg"
+    "img": "img/queso.jpg",
+    "tipus": "fred"
   }, {
   
-    "nom": "Entrepa Tonyina",
+    "nom": "Tonyina",
     "torn": "mati",
     "preu": "2.90",
-    "img": "img/mixto.jpg"
+    "img": "img/atun.jpg",
+    "tipus": "fred"
   }, {
   
-    "nom": "Entrepa Sal",
+    "nom": "Xoriço",
     "torn": "mati",
     "preu": "2.90",
-    "img": "img/vegetal.jpg"
+    "img": "img/chorizo.jpg",
+    "tipus": "fred"
   }]
