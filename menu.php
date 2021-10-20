@@ -60,7 +60,7 @@ body {
 <div class="item" style="--color:#2D9BE8;"><p>Bocatas Vegetarians</p></div>
 <div class="item" style="--color:#6FD0EA;"><p>
 <?php
-    $data = file_get_contents("menu.json");
+    $data = file_get_contents("menuM.json");
     $menuMati = json_decode($data, true);
     foreach ($menuMati as $prod){
         echo $prod["nom"]." </br>".$prod["preu"]."€ </br>";
@@ -74,7 +74,7 @@ body {
 
 <div class="item" style="--color:#6FD0EA;"><p>
 <?php
-    $data = file_get_contents("menu.json");
+    $data = file_get_contents("menuM.json");
     $menuMati = json_decode($data, true);
     foreach ($menuMati as $prod){
         echo $prod["nom"]." </br>".$prod["preu"]."€ </br>";
@@ -90,7 +90,7 @@ body {
 
 <div class="item" style="--color:#6FD0EA;"><p>
 <?php
-    $data = file_get_contents("menu.json");
+    $data = file_get_contents("menuM.json");
     $menuMati = json_decode($data, true);
     foreach ($menuMati as $prod){
         echo $prod["nom"]." </br>".$prod["preu"]."€ </br>";
