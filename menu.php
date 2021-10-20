@@ -55,6 +55,17 @@ body {
 <body>
 <h1 class="h1menu">Menu</h1>
 
+<?php
+echo "<br>";
+if( isset( $_COOKIE["Limitador"]) )
+{
+    echo "Existe";
+}
+else {
+    echo "No existe, puede continuar";
+}
+?>
+
 <div id="cuadricula">
 <div class="item" style="--color:#2D9BE8;"><h3><b><u>Bocatas Freds</u></b></h3></div>
 <div class="item" style="--color:#2D9BE8;"><h3><b><u>Bocatas Calents</u></b></h3></div>
