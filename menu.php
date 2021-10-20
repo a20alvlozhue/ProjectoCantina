@@ -55,54 +55,55 @@ body {
 <h1 class="h1menu">Menu</h1>
 
 <div id="cuadricula">
-<div class="item" style="--color:#3E989B;"><p>Bocatas Freds</p></div>
-<div class="item" style="--color:#6DB465;"><p>Bocatas Calents</p></div>
-<div class="item" style="--color:#F2C14E;"><p>Bocatas Vegetarians</p></div>
-<div class="item" style="--color:#F78154;"><p>
+<div class="item" style="--color:#2D9BE8;"><p>Bocatas Freds</p></div>
+<div class="item" style="--color:#2D9BE8;"><p>Bocatas Calents</p></div>
+<div class="item" style="--color:#2D9BE8;"><p>Bocatas Vegetarians</p></div>
+<div class="item" style="--color:#6FD0EA;"><p>
 <?php
     $data = file_get_contents("menu.json");
     $menuMati = json_decode($data, true);
     foreach ($menuMati as $prod){
         echo $prod["nom"]." </br>".$prod["preu"]."€ </br>";
         echo "<img src=".$prod["img"]." width='100px'></br>";
-        
+        echo "<button>+</button>";
+        echo "<button>-</button></br>";
     }
 ?>
 </p></div>
 
 
-<div class="item" style="--color:#C87694;"><p>
+<div class="item" style="--color:#6FD0EA;"><p>
 <?php
     $data = file_get_contents("menu.json");
     $menuMati = json_decode($data, true);
     foreach ($menuMati as $prod){
         echo $prod["nom"]." </br>".$prod["preu"]."€ </br>";
         echo "<img src=".$prod["img"]." width='100px'></br>";
-        
-        
+        echo "<button>+</button>";
+        echo "<button>-</button></br>";
     }
 ?>
-    <input type="button" value="+">
-    <input type="button" value="-">  
        
     
 
 </p></div>
 
-<div class="item" style="--color:#C87694;"><p>
+<div class="item" style="--color:#6FD0EA;"><p>
 <?php
     $data = file_get_contents("menu.json");
     $menuMati = json_decode($data, true);
     foreach ($menuMati as $prod){
         echo $prod["nom"]." </br>".$prod["preu"]."€ </br>";
         echo "<img src=".$prod["img"]." width='100px'></br>";
-        
+        echo "<button>+</button>";
+        echo "<button>-</button></br>";
     }
 ?>
 </p></div>
 </div>
 
-
+<hr>
+<br></br>
 
 
 <div class="abajo">
