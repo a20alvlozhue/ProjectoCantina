@@ -1,28 +1,16 @@
 <!DOCTYPE html>
-<Html lang = "es">
-<Head>
-<Charset Meta = "UTF-8">
-<Título> advertencia básica instancia de mensaje </ title>
-<Meta name = "description" content = "Crear alertas básicas con Twitter Bootstrap. Ejemplos de alertas y errores con Twitter Bootstrap">
-<Enlace href = "/ twitter-arranque / twitter-arranque-v2 / docs / activos / css / bootstrap.css" rel = "stylesheet">
-<Style type = "text / css">
-body {
-padding: 50px;
-}
-</ Style>
-</ Head>
-<Cuerpo>
-<Div class = "contenedor">
-<Div class = "fila">
-<Div class = "span4">
-<Div class = "alert">
-<a class="close" data-dismiss="alert"> × </a>
-<Strong> Atención! </ Strong> Mejor comprobar yo mismo, usted no está buscando demasiado bueno.
-</ Div>
-</ Div>
-</ Div>
-</ Div>
-<script src = "twitter-arranque-V2 / docs / activos / js / jquery.js"> </ script>
-<Script src = "twitter-arranque-V2 / docs / activos / js / bootstrap-alert.js"> </ script>
-</ Body>
-</ Html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+    <title>Bootstrap 实例 - 警告（Alerts）</title>
+	<link rel="stylesheet" href="http://cdn.static.w3big.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.w3big.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.w3big.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="alert alert-danger">No se puede pedir + de 2 pedidos en 1 dia</div>
+
+
+</body>
+</html>
