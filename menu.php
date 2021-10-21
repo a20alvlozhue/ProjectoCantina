@@ -16,6 +16,9 @@
 
 <style>
 
+    .foto{
+        width: 200px;
+    }
     .h1menu{
         color: black;
     }
@@ -111,20 +114,86 @@ else {
 </p></div>
 
 <div class="item" style="--color:#6FD0EA;"><p>
+<div id='menu'>
 <?php
-    $data = file_get_contents("json/menuT.json");
-    $menuMati = json_decode($data, true);
-    foreach ($menuMati as $prod){
-        echo $prod["nom"]." </br>".$prod["preu"]."€ </br>";
-        echo "<img src=".$prod["img"]." width='100px'></br>";
-        echo "<input type='button' value='-' class='afegir'></input>";
-        echo "<input type='text' value='0' id='i'>";
-        echo "<input type='button' value='+' class='treure'></input></br>";
-    }
-?>
-<script type="text/javascript" src="js/compra.js"></script>
+                        $data = file_get_contents("json/menuM.json");
+                        $menuMati = json_decode($data, true);
+                        mostrarProd($menuMati);
+
+                        function mostrarProd($menuMati){                
+                            $var = 0;
+                            foreach ($menuMati as $prod) {
+                                if($var == 0){
+                                    echo "<div class='item".($var+1)."'></div>";
+                                    $var++;
+                                }else if ($var == 5){
+                                    echo "<div class='gc".($var+1)."'></div>";
+                                    $var++;
+                                }else if($var == 10){
+                                    echo "<div class='item".($var+1)."'></div>";
+                                    $var++;
+                                }         
+                                echo "<div class='gc".($var+1). " pr-grid'>";
+                                    echo '<div class="img">
+                                            <img src='.$prod["img"].' class="foto">
+                                          </div>
+                                          <div class="text">
+                                            <input type="button" id="quitar" class="quitar" value="-">
+                                            <span>'.$prod["nom"].  '</span><span> '.$prod["preu"].'€</span>
+                                            <input type="hidden" id="hidden" value="'.$prod["id"].'">
+                                            <input type="button" id="añadir" class="añadir" value="+">
+                                          </div></div>';
+                                $var++; 
+                            }
+                            echo "<div class='gc".($var+1)."'><input type='submit' value='Finalitzar compra'></div>";
+                        }
+                    ?>
+</div>
 </p></div>
 </div>
+
+<div class="ticket">
+                    <h3>Ticket</h3>
+                    <div id="carrito">
+                        
+                    </div>
+                    <div>
+                        <h4>Total: <span id="total">0</span><span>€</span>
+                    </div>
+                </div>
+            </div>
+        </form>
+       
+        <script>
+            var tot;
+            document.getElementById("menu").addEventListener("click", function(e){
+                if(e.target.classList.contains("añadir")){
+                    var idProd = e.target.parentElement.childNodes[6].value;
+                    var nomProd = e.target.parentElement.childNodes[3].innerHTML;
+                    var preuProd = e.target.parentElement.childNodes[4].innerHTML; 
+                    element = document.getElementById("prod"+idProd);
+                    if(typeof(element) != 'undefined' && element != null){
+                        document.getElementById("preu"+idProd).innerHTML++;
+                    }else{
+                        document.getElementById("carrito").insertAdjacentHTML("beforeend", "<p id=prod"+idProd+">"+nomProd+ " <span id=preu"+idProd+">1</span></p>");
+                    }
+                    document.getElementById("total").innerHTML = (parseFloat(preuProd) + parseFloat(document.getElementById("total").innerHTML));
+                }
+                else if(e.target.classList.contains("quitar")){
+                    var idProd = e.target.parentElement.childNodes[6].value;
+                    var nomProd = e.target.parentElement.childNodes[3].innerHTML;
+                    var preuProd = e.target.parentElement.childNodes[4].innerHTML;
+                    element = document.getElementById("prod"+idProd);
+                    if(typeof(element) != 'undefined' && element != null){
+                        document.getElementById("preu"+idProd).innerHTML--;
+                        document.getElementById("total").innerHTML = parseFloat(document.getElementById("total").innerHTML) - (parseFloat(preuProd) );
+                        if(document.getElementById("preu"+idProd).innerHTML == 0){
+                            element.remove()
+                        }
+                    }
+                }
+            });
+        </script>
 
 
 
