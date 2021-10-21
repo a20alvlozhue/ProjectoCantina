@@ -3,23 +3,27 @@
   "nom": "Entrepa Bacon + Formatge",
   "torn": "mati",
   "preu": "2.90",
-  "img": "img/bq.jpg"
+  "img": "img/bq.jpg",
+   "id": "p1"
 }, {
 
   "nom": "Entrepa Pernil",
   "torn": "mati",
   "preu": "2.90",
-  "img": "img/jamo.jpg"
+  "img": "img/jamo.jpg",
+   "id": "p2"
 }, {
 
   "nom": "Entrepa Tonyina",
   "torn": "mati",
   "preu": "2.90",
-  "img": "img/mixto.jpg"
+  "img": "img/mixto.jpg",
+  "id": "p3"
 }, {
 
   "nom": "Entrepa Sal",
   "torn": "mati",
   "preu": "2.90",
-  "img": "img/vegetal.jpg"
+  "img": "img/vegetal.jpg",
+  "id": "p4"
 }]
