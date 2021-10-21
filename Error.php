@@ -1,16 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8"> 
-    <title>Bootstrap 实例 - 警告（Alerts）</title>
-	<link rel="stylesheet" href="http://cdn.static.w3big.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="http://cdn.static.w3big.com/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="http://cdn.static.w3big.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-
-<div class="alert alert-danger">No se puede pedir + de 2 pedidos en 1 dia</div>
+<div id="MensajeTiendaNew">No se pueden hacer mas de dos compras en un mismo dia!!</div>
 
 
-</body>
-</html>
+
+<style>
+
+    #MensajeTiendaNew{
+	background: rgb(228, 90, 90);
+	color: #fff;
+	border-color: #54b268;
+	animation: tiendaNew 2.72s ease infinite;
+	transform-origin: 50% 50%;
+	-webkit-transition: 0.5s ease-out;
+	-moz-transition: 0.5s ease-out;
+	-o-transition: 0.5s ease-out;
+	transition: 0.5s ease-out;
+	text-align: center;
+	font-size: 13px;
+	padding: 10px;
+	margin-bottom: 15px;
+	clear: both;
+	display: block;
+	width: 100%;
+	-webkit-border-radius: 6px;
+	-moz-border-radis: 6px;
+	border-radius: 6px;
+}
+@keyframes tiendaNew{
+	0% { transform:translate(0,0) }
+	4.41177% { transform:translate(5px,0) }
+	8.82353% { transform:translate(0,0) }
+	13.23529% { transform:translate(5px,0) }
+	17.64706% { transform:translate(0,0) }
+	22.05882% { transform:translate(5px,0) }
+	26.47059% { transform:translate(0,0) }
+	100% { transform:translate(0,0) }
+}
+#MensajeTiendaNew:hover{
+	background:#969696;
+	color: #fff;
+}
+</style>
