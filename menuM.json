@@ -4,30 +4,26 @@
     "torn": "mati",
     "preu": "2.90",
     "img": "img/jamo.jpg",
-    "tipus": "fred",
-    "id":"1"
+    "tipus": "fred"
   }, {
   
     "nom": "Formatge",
     "torn": "mati",
     "preu": "2.90",
     "img": "img/queso.jpg",
-    "tipus": "fred",
-    "id":"2"
+    "tipus": "fred"
   }, {
   
     "nom": "Tonyina",
     "torn": "mati",
     "preu": "2.90",
     "img": "img/atun.jpg",
-    "tipus": "fred",
-    "id":"3"
+    "tipus": "fred"
   }, {
   
     "nom": "Xoriço",
     "torn": "mati",
     "preu": "2.90",
     "img": "img/chorizo.jpg",
-    "tipus": "fred",
-    "id":"4"
+    "tipus": "fred"
   }]
