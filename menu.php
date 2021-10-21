@@ -1,6 +1,12 @@
+<?php 
+ if (isset($_COOKIE['Limitador'])){
+    header('Location: error.php');
+}
+
+?>
 <html>
 <head>
-
+<script type="text/javascript" src="js/compra.js"></script>
     <?php
     require_once('header.php');
     ?>
@@ -71,35 +77,23 @@ else {
 <div class="item" style="--color:#2D9BE8;"><h3><b><u>Bocatas Calents</u></b></h3></div>
 <div class="item" style="--color:#2D9BE8;"><h3><b><u>Bocatas Vegetarians</u></b></h3></div>
 <div class="item" style="--color:#6FD0EA;"><p>
-<?php
-    $data = file_get_contents("json/menu.json");
-    $menuMati = json_decode($data, true);
-    foreach ($menuMati as $prod){
-        echo $prod["nom"]." </br>".$prod["preu"]."€ </br>";
-        echo "<img src=".$prod["img"]." width='100px'></br>";
-        echo "<input type='button' value='-' class='afegir'></input>";
-        echo "<input type='text' value='0' id='i'>";
-        echo "<input type='button' value='+' class='treure'></input></br>";
-    }
-?>
-</p></div>
+
+<form id='mati'>
+    <?php
+        $data = file_get_contents("json/menuM.json");
+        $products = json_decode($data, true);
+        foreach ($products as $prod) {
+            echo "<div id='".$prod["id"]."' >".$prod["nom"]."</br>";
+            echo "<img src='img/productes/".$prod["ruta"]."' width=300px height=200px ></br>";
+            echo $prod["preu"]."€ <br>"; 
+            echo "<input type='button' value='+' class='afegir'></input>";
+            echo "<input type='text' value='0' id='i".$prod["id"]."' >";
+            echo "<input type='button' value='-' class='treure'></input><br><br></div>";               
+        }
+    ?>
+    </form>
 
 
-
-<div class="item" style="--color:#6FD0EA;"><p>
-<?php
-    $data = file_get_contents("json/menuM.json");
-    $menuMati = json_decode($data, true);
-    foreach ($menuMati as $prod){
-        echo $prod["nom"]." </br>".$prod["preu"]."€ </br>";
-        echo "<img src=".$prod["img"]." width='100px'></br>";
-        echo "<input type='button' value='-' class='afegir'></input>";
-        echo "<input type='text' value='0' id='i'>";
-        echo "<input type='button' value='+' class='treure'></input></br>";
-    }
-?>
-       
-    
 
 </p></div>
 
@@ -119,21 +113,17 @@ else {
 </p></div>
 </div>
 
+
+
+
 <hr>
 <br></br>
 
 
 <div class="abajo">
     <form action="comandav.php">
-        <input type="submit" name="boton" value="Validació comanda"
-            <?php
-            if ($limitadores==1){
-            ?>
-            disabled
-            <?php
-            }else{
-            }
-            ?>>
+        <input type="submit" name="boton" value="Validació comanda">
+           
     </form>
 
     <form action="inici.php">
