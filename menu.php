@@ -124,7 +124,6 @@ else {
 <div class="item" style="--color:#6FD0EA;"><p>
 <div id='menu'>
 <?php
-<<<<<<< HEAD
                         $data = file_get_contents("json/menuM.json");
                         $menuMati = json_decode($data, true);
                         mostrarProd($menuMati);
@@ -158,19 +157,6 @@ else {
                         }
                     ?>
 </div>
-=======
-    $data = file_get_contents("json/menuT.json");
-    $menuMati = json_decode($data, true);
-    foreach ($menuMati as $prod){
-        echo $prod["nom"]." </br>".$prod["preu"]."€ </br>";
-        echo "<img src=".$prod["img"]." width='100px'></br>";
-        echo "<input type='button' value='-' class='afegir'></input>";
-        echo "<input type='text' value='0' id='i'>";
-        echo "<input type='button' value='+' class='treure'></input></br>";
-    }
-?>
-
->>>>>>> 13257bd97802596a3f7e6a2fca79e066d8accbcd
 </p></div>
 </div>
 
