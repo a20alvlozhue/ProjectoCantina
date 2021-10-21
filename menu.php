@@ -1,4 +1,7 @@
 <?php 
+
+//Si la cookie existe, nos envia a la pagina error.php
+
  if (isset($_COOKIE['Limitador'])){
     header('Location: error.php');
 }
@@ -10,8 +13,13 @@
     <?php
     require_once('header.php');
     ?>
+    
+    <script type="text/javascript" src="js/compra.js"></script>
 
     <title>Inici</title>
+    
+
+
 </head>
 
 <style>
@@ -122,7 +130,7 @@ else {
         echo "<input type='button' value='+' class='treure'></input></br>";
     }
 ?>
-<script type="text/javascript" src="js/compra.js"></script>
+
 </p></div>
 </div>
 
