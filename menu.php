@@ -115,7 +115,9 @@ else {
         echo "<input type='text' value='0' id='i'>";
         echo "<input type='button' value='+' class='treure'></input></br>";
     }
-?>
+?> 
+
+
        
     
 
