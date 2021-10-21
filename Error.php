@@ -5,7 +5,7 @@
 <style>
 
     #MensajeTiendaNew{
-	background: #79568e;
+	background: rgb(228, 90, 90);
 	color: #fff;
 	border-color: #54b268;
 	animation: tiendaNew 2.72s ease infinite;
