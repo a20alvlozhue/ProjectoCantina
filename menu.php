@@ -155,7 +155,7 @@ else {
                                           </div></div>';
                                 $var++; 
                             }
-                            echo "<div class='gc".($var+1)."'><input type='submit' value='Finalitzar compra'></div>";
+                           
                         }
                     ?>
 </div>
