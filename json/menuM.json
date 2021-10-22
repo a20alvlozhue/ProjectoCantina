@@ -5,7 +5,7 @@
     "preu": "2.90",
     "img": "img/jamo.jpg",
     "tipus": "fred",
-    "id":"1"
+     "id": "5"
   }, {
   
     "nom": "Formatge",
@@ -13,7 +13,7 @@
     "preu": "2.90",
     "img": "img/queso.jpg",
     "tipus": "fred",
-    "id":"2"
+    "id": "6"
   }, {
   
     "nom": "Tonyina",
@@ -21,7 +21,7 @@
     "preu": "2.90",
     "img": "img/atun.jpg",
     "tipus": "fred",
-    "id":"3"
+    "id": "7"
   }, {
   
     "nom": "Xoriço",
@@ -29,5 +29,5 @@
     "preu": "2.90",
     "img": "img/chorizo.jpg",
     "tipus": "fred",
-    "id":"4"
+    "id": "8"
   }]

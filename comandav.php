@@ -9,39 +9,7 @@
     <title>Validació comanda</title>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <style>
-
-        .grid_div{
-            display: grid;
-            grid-template-columns: 2fr 2fr;
-            grid-column-gap: 60px;  
-            padding: 10px;      
-            margin: 25px;
-
-            background-color: grey;
-        }
-
-        .dades_comanda{
-            display: grid;
-            background-color: lightcoral;
-        }
-
-        .formulari{
-            display: grid;
-            align-items: center;
-            justify-items: left;
-            background-color: lightblue;
-        }
-
-        .sub{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-    </style>
-    
+    <link rel="stylesheet" href="css/comandav.css">
 </head>
 
 <body>
@@ -97,7 +65,7 @@
 
     <!--Formulari Confirmació compra-->
 
-    <form method="post" name="form" action="ticket.php">
+    <form method="post" name="form" action="comandaf.php">
 
         <div class="formulari">
             <div class="form_cont">

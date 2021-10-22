@@ -1,16 +1,8 @@
-let day = new Date();
+let mati = horaMenu();
 
-let fecha = day.getDate() + '-' + day.getMonth() + '-' + day.getFullYear();
+let form = document.getElementById(mati);
 
-let hora = day.getHours() + ':' + day.getMinutes();
-
-
-
-let mati_o_tarda = horaM(hora);
-
-let carrito = document.getElementById(mati_o_tarda);
-
-carrito.addEventListener('click', e => {
+form.addEventListener('click', function(e) {
 
     if(e.target.classList.contains('afegir')){
         console.log("Has añadido el producto");
@@ -39,21 +31,29 @@ function retirarProducto(e,idProducto){
     }
 }
 
-function horaM(horaMenu){
-    let tarda = document.getElementById("tarda");
+function horaMenu(){
+    
+    let day = new Date();
+    
+    let hora = day.getHours();
+    let minuts= day.getMinutes() ;
+
+    console.log(hora);
+    console.log(minuts);
     let mati = document.getElementById("mati");
-    if(horaMenu <="13:30"){
-        
+    let tarda = document.getElementById("tarda");
+    if(hora < 11  ){
+       
         tarda.style.display = "none";
 
         return "mati";
-    }else{
+    }else if(hora==11 && minuts <=30){
+        tarda.style.display = "none";
+
+        return "mati";
         
-        mati.style.display = "none";
-        return "tarda";
     }
 }
-
 function actualizarCarrito(){
     htmlStr="";
     linputs= document.querySelectorAll("#form :input");

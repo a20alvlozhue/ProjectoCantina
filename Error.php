@@ -1,42 +1,17 @@
-<div id="MensajeTiendaNew">No se pueden hacer mas de dos compras en un mismo dia!!</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/error.css">
+</head>
+<body>
+	
+	
+	<div id="MensajeTiendaNew">No se pueden hacer mas de dos compras en un mismo dia!!</div>
 
 
-
-<style>
-
-    #MensajeTiendaNew{
-	background: rgb(228, 90, 90);
-	color: #fff;
-	border-color: #54b268;
-	animation: tiendaNew 2.72s ease infinite;
-	transform-origin: 50% 50%;
-	-webkit-transition: 0.5s ease-out;
-	-moz-transition: 0.5s ease-out;
-	-o-transition: 0.5s ease-out;
-	transition: 0.5s ease-out;
-	text-align: center;
-	font-size: 13px;
-	padding: 10px;
-	margin-bottom: 15px;
-	clear: both;
-	display: block;
-	width: 100%;
-	-webkit-border-radius: 6px;
-	-moz-border-radis: 6px;
-	border-radius: 6px;
-}
-@keyframes tiendaNew{
-	0% { transform:translate(0,0) }
-	4.41177% { transform:translate(5px,0) }
-	8.82353% { transform:translate(0,0) }
-	13.23529% { transform:translate(5px,0) }
-	17.64706% { transform:translate(0,0) }
-	22.05882% { transform:translate(5px,0) }
-	26.47059% { transform:translate(0,0) }
-	100% { transform:translate(0,0) }
-}
-#MensajeTiendaNew:hover{
-	background:#969696;
-	color: #fff;
-}
-</style>
+</body>
+</html>

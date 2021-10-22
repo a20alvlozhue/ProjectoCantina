@@ -3,23 +3,28 @@
     "nom": "Panini",
     "torn": "tarda",
     "preu": "1.5",
-    "img": "img/panini.jpg"
+    "img": "img/panini.jpg",
+     "id": "9"
   }, {
   
     "nom": "Patates",
     "torn": "tarda",
     "preu": "2",
-    "img": "img/pata.jpg"
+    "img": "img/pata.jpg",
+    "id": "10"
+
   }, {
   
     "nom": "Frankfurt",
     "torn": "tarda",
     "preu": "2.90",
-    "img": "img/frank.jpg"
+    "img": "img/frank.jpg",
+     "id": "11"
   }, {
   
     "nom": "Hamburguesa",
     "torn": "tarda",
     "preu": "3.50",
-    "img": "img/hamb.jpg"
+    "img": "img/hamb.jpg",
+     "id": "12"
   }]

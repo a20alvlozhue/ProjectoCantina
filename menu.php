@@ -18,57 +18,10 @@
 
     <title>Inici</title>
     
-
+    <link rel="stylesheet" href="css/menu.css">
 
 </head>
 
-<style>
-
-    .foto{
-        width: 200px;
-    }
-    .h1menu{
-        color: black;
-    }
-
-    .abajo{
-        text-align: center;
-    }
-
-    #cuadricula {
-  display: grid;
-  /*
-  grid-template-rows: [r1] 1fr [r2] 2fr [r3];
-  grid-template-columns: [c1] 1fr [c2] 1fr [c3] 1fr [c4];
-  */
-  
-  grid-template:[r1] 1fr [r2] 7fr [r3] 
-              / [c1] 1fr [c2] 1fr [c3] 1fr [c4];
-  grid-gap:1em;
-  
-}
-
-.item {
-  padding:1em;
-  border: 1px solid #000;
-  border-radius: 10px;
-  background-color: #3E989B;
-  background-color: var(--color);
-  text-align: center;
-  font-family: Courier New;
-}
-
-.item:nth-child(5){
-grid-column: c2 / c3;
-}
-
-body {
-  font-family: Verdana, Geneva, sans-serif;
-  line-height: 2em;
-  background-color:#222;
-}
-
-</style>
 <body>
 <h1 class="h1menu">Menu</h1>
 
@@ -153,9 +106,10 @@ else {
                                             <input type="hidden" id="hidden" value="'.$prod["id"].'">
                                             <input type="button" id="añadir" class="añadir" value="+">
                                           </div></div>';
+                                          echo "</br>";
                                 $var++; 
                             }
-                           
+                            
                         }
                     ?>
 </div>
@@ -196,7 +150,7 @@ else {
                     element = document.getElementById("prod"+idProd);
                     if(typeof(element) != 'undefined' && element != null){
                         document.getElementById("preu"+idProd).innerHTML--;
-                        document.getElementById("total").innerHTML = parseFloat(document.getElementById("total").innerHTML) - (parseFloat(preuProd) );
+                        document.getElementById("total").innerHTML = parseFloat(document.getElementById("total").innerHTML) - (parseint(preuProd) );
                         if(document.getElementById("preu"+idProd).innerHTML == 0){
                             element.remove()
                         }
