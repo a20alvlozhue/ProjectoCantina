@@ -20,7 +20,7 @@
                     element = document.getElementById("prod"+idProd);
                     if(typeof(element) != 'undefined' && element != null){
                         document.getElementById("preu"+idProd).innerHTML--;
-                        document.getElementById("total").innerHTML = parseFloat(document.getElementById("total").innerHTML) - (parseint(preuProd) );
+                        document.getElementById("total").innerHTML = parseFloat(document.getElementById("total").innerHTML) - (parseFloat(preuProd) );
                         if(document.getElementById("preu"+idProd).innerHTML == 0){
                             element.remove()
                         }
