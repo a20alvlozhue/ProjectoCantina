@@ -16,8 +16,8 @@ grid-template-rows: [r1] 1fr [r2] 2fr [r3];
 grid-template-columns: [c1] 1fr [c2] 1fr [c3] 1fr [c4];
 */
 
-grid-template:[r1] 1fr [r2] 7fr [r3] 
-          / [c1] 1fr [c2] 1fr [c3] 1fr [c4];
+grid-template:[r1] 1fr [r2] 7fr [r3]
+          / [c1] 1fr [c2] 1fr [c3] 1fr [c4] 1fr [c5] 1fr ;
 grid-gap:1em;
 
 }
@@ -32,7 +32,7 @@ text-align: center;
 font-family: Courier New;
 }
 
-.item:nth-child(5){
+.item:nth-child(7){
 grid-column: c2 / c3;
 }
 
@@ -40,4 +40,8 @@ body {
 font-family: Verdana, Geneva, sans-serif;
 line-height: 2em;
 background-color:#222;
+}
+
+.ticket{
+    background-color:#3E989B;
 }

@@ -1,0 +1,29 @@
+[{
+
+    "nom": "Donunt",
+    "torn": "mati",
+    "preu": "2",
+    "img": "img/donut.jpg",
+     "id": "1"
+  }, {
+  
+    "nom": "Napolitana",
+    "torn": "mati",
+    "preu": "2",
+    "img": "img/napolitana.jpg",
+     "id": "2"
+  }, {
+  
+    "nom": "Pan de Pipa",
+    "torn": "mati",
+    "preu": "2",
+    "img": "img/panpipa.jpg",
+    "id": "3"
+  }, {
+  
+    "nom": "Patatas",
+    "torn": "mati",
+    "preu": "2",
+    "img": "img/patatas.jpg",
+    "id": "4"
+  }]
