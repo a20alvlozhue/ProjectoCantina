@@ -131,15 +131,15 @@
 
 <script>
 
-    /* Array amb els missatages d'error de validació  */
+    
     const err = ["Introdueix nom", "Introdueix un telèfon", "Telèfon no numeric", "Número de telèfon incorrecte (9 dígits)", "Introdueix un email", "Email incorrecte (@inspedrables.cat)" ];
 
-    /* Fer focus al camp nom al carregar la pàgina web */
+    
     window.onload = function(){
         document.getElementById("nom").focus();
     }
 
-    /* Mostrar missatges d'error */
+    
     document.getElementById("submit").addEventListener("click", function(e){
         var n, text="", error = 0;
 
@@ -162,7 +162,7 @@
     });
 
 
-    /* Funcions comprovació */
+    
 
     function errorNom(){
         return (document.getElementById("nom").value === "") ? true : false;
@@ -186,6 +186,9 @@
     }
 
 </script>
+<form action="menu.php">
+        <input type="submit" name="boton" value="🡨">
+    </form>
 
 
 
