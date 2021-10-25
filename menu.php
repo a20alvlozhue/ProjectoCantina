@@ -88,7 +88,7 @@ else {
 
 
 <div class="item" style="--color:#6FD0EA;">
-<div id='menu'>
+<div id='menum'>
 <?php
                         $data = file_get_contents("json/menuM.json");
                         $menuMati = json_decode($data, true);
@@ -128,7 +128,7 @@ else {
 </div>
 
 <div class="item" style="--color:#6FD0EA;">
-<div id='menu'>
+<div id='menut'>
 <?php
                         $data = file_get_contents("json/menuT.json");
                         $menuTarda = json_decode($data, true);
@@ -167,6 +167,7 @@ else {
 </div>
 
 <div class="item" style="--color:#6FD0EA;">
+<div id='postre'>
 <?php
                         $data = file_get_contents("json/postres.json");
                         $menuTarda = json_decode($data, true);
@@ -201,9 +202,11 @@ else {
                             
                         }
                     ?>
+     </div>
 </div>
 <div class="item" style="--color:#6FD0EA;">
 
+<div id='comple'>
 <?php
                         $data = file_get_contents("json/complements.json");
                         $menuTarda = json_decode($data, true);
@@ -239,6 +242,7 @@ else {
                         }
                     ?>
 </div>
+</div>
 </p></div>
 </div>
 
@@ -257,6 +261,10 @@ else {
         </form>
        
         <script src="js/menu.js"></script>
+        <script src="js/postre.js"></script>
+        <script src="js/complement.js"></script>
+        <script src="js/menuM.js"></script>
+        <script src="js/menuT.js"></script>
 
 
 

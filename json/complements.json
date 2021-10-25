@@ -4,26 +4,26 @@
     "torn": "mati",
     "preu": "2",
     "img": "img/donut.jpg",
-     "id": "1"
+     "id": "17"
   }, {
   
     "nom": "Napolitana",
     "torn": "mati",
     "preu": "2",
     "img": "img/napolitana.jpg",
-     "id": "2"
+     "id": "18"
   }, {
   
     "nom": "Pan de Pipa",
     "torn": "mati",
     "preu": "2",
     "img": "img/panpipa.jpg",
-    "id": "3"
+    "id": "19"
   }, {
   
     "nom": "Patatas",
     "torn": "mati",
     "preu": "2",
     "img": "img/patatas.jpg",
-    "id": "4"
+    "id": "20"
   }]

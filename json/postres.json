@@ -4,26 +4,26 @@
     "torn": "mati",
     "preu": "1",
     "img": "img/agua.jpg",
-     "id": "1"
+     "id": "13"
   }, {
   
     "nom": "Fanta",
     "torn": "mati",
     "preu": "1",
     "img": "img/fanta.jpg",
-     "id": "2"
+     "id": "14"
   }, {
   
     "nom": "Cocacola",
     "torn": "mati",
     "preu": "1",
     "img": "img/cocacola.jpg",
-    "id": "3"
+    "id": "15"
   }, {
   
     "nom": "Nestea",
     "torn": "mati",
     "preu": "1",
     "img": "img/nestea.jpg",
-    "id": "4"
+    "id": "16"
   }]
