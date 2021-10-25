@@ -22,36 +22,10 @@
 
 </head>
 
-<script>
-let mati = horaMenu();
 
-function horaMenu(){
-    
-    let day = new Date();
-    
-    let hora = day.getHours();
-    let minuts= day.getMinutes() ;
-
-    console.log(hora);
-    console.log(minuts);
-    let mati = document.getElementById("totmati");
-    let tarda = document.getElementById("tottarda");
-    if(hora < 11  ){
-       
-        document.getElementById("tottarda").style.display="none";
-
-        return "totmati";
-    }else if(hora==11 && minuts <=30){
-        document.getElementById("tottarda").style.display="none";
-
-        return "tottarda";
-        
-    }
-}
-</script>
 
 <body>
-<h1 class="h1menu">Menu</h1>
+
 
 <?php
 echo "<br>";
@@ -64,6 +38,7 @@ else {
 }
 ?>
 <div id="totmati">
+<h1 class="h1menu">Menu Mati</h1>
 <div id="cuadricula">
 <div class="item" style="--color:#2D9BE8;"><h3><b><u>Bocatas Freds</u></b></h3></div>
 <div class="item" style="--color:#2D9BE8;"><h3><b><u>Bocatas Calents</u></b></h3></div>

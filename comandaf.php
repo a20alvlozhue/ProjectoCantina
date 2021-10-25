@@ -27,7 +27,7 @@ else {
     echo "Si no existe, la creamos";
 
 // Se crea cookie con duración x hasta las 00:00
-    setcookie("Limitador", 54321, time() + $restante);
+    setcookie("Limitador", 54321, time() + $restante, "/");
 
 }
 ?>
