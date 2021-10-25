@@ -14,13 +14,41 @@
     require_once('header.php');
     ?>
     
-    <script type="text/javascript" src="js/compra.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
 
     <title>Inici</title>
     
     <link rel="stylesheet" href="css/menu.css">
 
 </head>
+
+<script>
+let mati = horaMenu();
+
+function horaMenu(){
+    
+    let day = new Date();
+    
+    let hora = day.getHours();
+    let minuts= day.getMinutes() ;
+
+    console.log(hora);
+    console.log(minuts);
+    let mati = document.getElementById("totmati");
+    let tarda = document.getElementById("tottarda");
+    if(hora < 11  ){
+       
+        document.getElementById("tottarda").style.display="none";
+
+        return "totmati";
+    }else if(hora==11 && minuts <=30){
+        document.getElementById("tottarda").style.display="none";
+
+        return "tottarda";
+        
+    }
+}
+</script>
 
 <body>
 <h1 class="h1menu">Menu</h1>
@@ -35,7 +63,7 @@ else {
     echo "No existe, puede continuar";
 }
 ?>
-
+<div id="totmati">
 <div id="cuadricula">
 <div class="item" style="--color:#2D9BE8;"><h3><b><u>Bocatas Freds</u></b></h3></div>
 <div class="item" style="--color:#2D9BE8;"><h3><b><u>Bocatas Calents</u></b></h3></div>
@@ -244,6 +272,221 @@ else {
 </div>
 </div>
 </p></div>
+</div>
+</div>
+
+
+<div id="tottarda">
+<h1>Menu Tarda</h1>
+<div id="cuadricula">
+<div class="item" style="--color:#2D9BE8;"><h3><b><u>Bocatas Freds</u></b></h3></div>
+<div class="item" style="--color:#2D9BE8;"><h3><b><u>Bocatas Calents</u></b></h3></div>
+<div class="item" style="--color:#2D9BE8;"><h3><b><u>Bocatas Vegetarians</u></b></h3></div>
+<div class="item" style="--color:#2D9BE8;"><h3><b><u>Begudes</u></b></h3></div>
+<div class="item" style="--color:#2D9BE8;"><h3><b><u>Complements</u></b></h3></div>
+
+
+<div class="item" style="--color:#6FD0EA;">
+
+
+<div id='menu'>
+<?php
+                        $data = file_get_contents("json/menu.json");
+                        $menuMati = json_decode($data, true);
+                        mostrarProd25($menuMati);
+
+                        function mostrarProd25($menuMati){                
+                            $var = 0;
+                            foreach ($menuMati as $prod) {
+                                if($var == 0){
+                                    echo "<div class='item".($var+1)."'></div>";
+                                    $var++;
+                                }else if ($var == 5){
+                                    echo "<div class='gc".($var+1)."'></div>";
+                                    $var++;
+                                }else if($var == 10){
+                                    echo "<div class='item".($var+1)."'></div>";
+                                    $var++;
+                                }         
+                                echo "<div class='gc".($var+1). " pr-grid'>";
+                                    echo '<div class="img">
+                                            <img src='.$prod["img"].' class="foto">
+                                          </div>
+                                          <div class="text">
+                                            <input type="button" id="quitar" class="quitar" value="-">
+                                            <span>'.$prod["nom"].  '</span><span> '.$prod["preu"].'€</span>
+                                            <input type="hidden" id="hidden" value="'.$prod["id"].'">
+                                            <input type="button" id="añadir" class="añadir" value="+">
+                                          </div></div>';
+                                          echo "</br>";
+                                $var++; 
+                            }
+                            
+                        }
+                    ?>
+</div>   
+</div>
+
+
+
+<div class="item" style="--color:#6FD0EA;">
+<div id='menum'>
+<?php
+                        $data = file_get_contents("json/menuM.json");
+                        $menuMati = json_decode($data, true);
+                        mostrarProd5($menuMati);
+
+                        function mostrarProd5($menuMati){                
+                            $var = 0;
+                            foreach ($menuMati as $prod) {
+                                if($var == 0){
+                                    echo "<div class='item".($var+1)."'></div>";
+                                    $var++;
+                                }else if ($var == 5){
+                                    echo "<div class='gc".($var+1)."'></div>";
+                                    $var++;
+                                }else if($var == 10){
+                                    echo "<div class='item".($var+1)."'></div>";
+                                    $var++;
+                                }         
+                                echo "<div class='gc".($var+1). " pr-grid'>";
+                                    echo '<div class="img">
+                                            <img src='.$prod["img"].' class="foto">
+                                          </div>
+                                          <div class="text">
+                                            <input type="button" id="quitar" class="quitar" value="-">
+                                            <span>'.$prod["nom"].  '</span><span> '.$prod["preu"].'€</span>
+                                            <input type="hidden" id="hidden" value="'.$prod["id"].'">
+                                            <input type="button" id="añadir" class="añadir" value="+">
+                                          </div></div>';
+                                          echo "</br>";
+                                $var++; 
+                            }
+                            
+                        }
+                    ?>
+</div>   
+
+</div>
+
+<div class="item" style="--color:#6FD0EA;">
+<div id='menut'>
+<?php
+                        $data = file_get_contents("json/menuT.json");
+                        $menuTarda = json_decode($data, true);
+                        mostrarProd15($menuTarda);
+
+                        function mostrarProd15($menuTarda){                
+                            $var = 0;
+                            foreach ($menuTarda as $prod) {
+                                if($var == 0){
+                                    echo "<div class='item".($var+1)."'></div>";
+                                    $var++;
+                                }else if ($var == 5){
+                                    echo "<div class='gc".($var+1)."'></div>";
+                                    $var++;
+                                }else if($var == 10){
+                                    echo "<div class='item".($var+1)."'></div>";
+                                    $var++;
+                                }         
+                                echo "<div class='gc".($var+1). " pr-grid'>";
+                                    echo '<div class="img">
+                                            <img src='.$prod["img"].' class="foto">
+                                          </div>
+                                          <div class="text">
+                                            <input type="button" id="quitar" class="quitar" value="-">
+                                            <span>'.$prod["nom"].  '</span><span> '.$prod["preu"].'€</span>
+                                            <input type="hidden" id="hidden" value="'.$prod["id"].'">
+                                            <input type="button" id="añadir" class="añadir" value="+">
+                                          </div></div>';
+                                          echo "</br>";
+                                $var++; 
+                            }
+                            
+                        }
+                    ?>
+</div>
+</div>
+
+<div class="item" style="--color:#6FD0EA;">
+<div id='postre'>
+<?php
+                        $data = file_get_contents("json/postres.json");
+                        $menuTarda = json_decode($data, true);
+                        mostrarPostres5($menuTarda);
+
+                        function mostrarPostres5($menuTarda){                
+                            $var = 0;
+                            foreach ($menuTarda as $prod) {
+                                if($var == 0){
+                                    echo "<div class='item".($var+1)."'></div>";
+                                    $var++;
+                                }else if ($var == 5){
+                                    echo "<div class='gc".($var+1)."'></div>";
+                                    $var++;
+                                }else if($var == 10){
+                                    echo "<div class='item".($var+1)."'></div>";
+                                    $var++;
+                                }         
+                                echo "<div class='gc".($var+1). " pr-grid'>";
+                                    echo '<div class="img">
+                                            <img src='.$prod["img"].' class="foto">
+                                          </div>
+                                          <div class="text">
+                                            <input type="button" id="quitar" class="quitar" value="-">
+                                            <span>'.$prod["nom"].  '</span><span> '.$prod["preu"].'€</span>
+                                            <input type="hidden" id="hidden" value="'.$prod["id"].'">
+                                            <input type="button" id="añadir" class="añadir" value="+">
+                                          </div></div>';
+                                          echo "</br>";
+                                $var++; 
+                            }
+                            
+                        }
+                    ?>
+     </div>
+</div>
+<div class="item" style="--color:#6FD0EA;">
+
+<div id='comple'>
+<?php
+                        $data = file_get_contents("json/complements.json");
+                        $menuTarda = json_decode($data, true);
+                        mostrarcomplementos5($menuTarda);
+
+                        function mostrarcomplementos5($menuTarda){                
+                            $var = 0;
+                            foreach ($menuTarda as $prod) {
+                                if($var == 0){
+                                    echo "<div class='item".($var+1)."'></div>";
+                                    $var++;
+                                }else if ($var == 5){
+                                    echo "<div class='gc".($var+1)."'></div>";
+                                    $var++;
+                                }else if($var == 10){
+                                    echo "<div class='item".($var+1)."'></div>";
+                                    $var++;
+                                }         
+                                echo "<div class='gc".($var+1). " pr-grid'>";
+                                    echo '<div class="img">
+                                            <img src='.$prod["img"].' class="foto">
+                                          </div>
+                                          <div class="text">
+                                            <input type="button" id="quitar" class="quitar" value="-">
+                                            <span>'.$prod["nom"].  '</span><span> '.$prod["preu"].'€</span>
+                                            <input type="hidden" id="hidden" value="'.$prod["id"].'">
+                                            <input type="button" id="añadir" class="añadir" value="+">
+                                          </div></div>';
+                                          echo "</br>";
+                                $var++; 
+                            }
+                            
+                        }
+                    ?>
+</div>
+</div>
+</p></div>
+</div>
 </div>
 
 <div class="ticket">
