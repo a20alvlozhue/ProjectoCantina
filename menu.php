@@ -264,9 +264,9 @@ else {
 <div class="item" style="--color:#6FD0EA;">
 
 
-<div id='menu'>
+<div id='menutarda'>
 <?php
-                        $data = file_get_contents("json/menu.json");
+                        $data = file_get_contents("json/menutarda.json");
                         $menuMati = json_decode($data, true);
                         mostrarProd25($menuMati);
 
@@ -305,7 +305,7 @@ else {
 
 
 <div class="item" style="--color:#6FD0EA;">
-<div id='menum'>
+<div id='menumtarda'>
 <?php
                         $data = file_get_contents("json/menuM.json");
                         $menuMati = json_decode($data, true);
@@ -345,9 +345,9 @@ else {
 </div>
 
 <div class="item" style="--color:#6FD0EA;">
-<div id='menut'>
+<div id='menuttarda'>
 <?php
-                        $data = file_get_contents("json/menuT.json");
+                        $data = file_get_contents("json/menuTtarda.json");
                         $menuTarda = json_decode($data, true);
                         mostrarProd15($menuTarda);
 
@@ -384,9 +384,9 @@ else {
 </div>
 
 <div class="item" style="--color:#6FD0EA;">
-<div id='postre'>
+<div id='postretarda'>
 <?php
-                        $data = file_get_contents("json/postres.json");
+                        $data = file_get_contents("json/postrestarda.json");
                         $menuTarda = json_decode($data, true);
                         mostrarPostres5($menuTarda);
 
@@ -423,9 +423,9 @@ else {
 </div>
 <div class="item" style="--color:#6FD0EA;">
 
-<div id='comple'>
+<div id='completarda'>
 <?php
-                        $data = file_get_contents("json/complements.json");
+                        $data = file_get_contents("json/complementstarda.json");
                         $menuTarda = json_decode($data, true);
                         mostrarcomplementos5($menuTarda);
 
@@ -483,6 +483,11 @@ else {
         <script src="js/complement.js"></script>
         <script src="js/menuM.js"></script>
         <script src="js/menuT.js"></script>
+        <script src="js/menutarda.js"></script>
+        <script src="js/postretarda.js"></script>
+        <script src="js/complementtarda.js"></script>
+        <script src="js/menuMtarda.js"></script>
+        <script src="js/menuTtarda.js"></script>
 
 
 

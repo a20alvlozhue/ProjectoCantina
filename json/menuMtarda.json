@@ -1,0 +1,33 @@
+[{
+
+    "nom": "Pernil salat",
+    "torn": "mati",
+    "preu": "2.90",
+    "img": "img/jamo.jpg",
+    "tipus": "fred",
+     "id": "5"
+  }, {
+  
+    "nom": "Formatge",
+    "torn": "mati",
+    "preu": "2.90",
+    "img": "img/queso.jpg",
+    "tipus": "fred",
+    "id": "6"
+  }, {
+  
+    "nom": "Tonyina",
+    "torn": "mati",
+    "preu": "2.90",
+    "img": "img/atun.jpg",
+    "tipus": "fred",
+    "id": "7"
+  }, {
+  
+    "nom": "Xoriço",
+    "torn": "mati",
+    "preu": "2.90",
+    "img": "img/chorizo.jpg",
+    "tipus": "fred",
+    "id": "8"
+  }]

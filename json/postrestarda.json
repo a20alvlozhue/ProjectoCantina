@@ -1,0 +1,29 @@
+[{
+
+    "nom": "Aigua",
+    "torn": "mati",
+    "preu": "1",
+    "img": "img/agua.jpg",
+     "id": "13"
+  }, {
+  
+    "nom": "Fanta",
+    "torn": "mati",
+    "preu": "1",
+    "img": "img/fanta.jpg",
+     "id": "14"
+  }, {
+  
+    "nom": "Cocacola",
+    "torn": "mati",
+    "preu": "1",
+    "img": "img/cocacola.jpg",
+    "id": "15"
+  }, {
+  
+    "nom": "Nestea",
+    "torn": "mati",
+    "preu": "1",
+    "img": "img/nestea.jpg",
+    "id": "16"
+  }]
