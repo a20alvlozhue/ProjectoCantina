@@ -11,8 +11,12 @@
 
         .dades_comanda{
             display: grid;
-            background-color: lightcoral;
+            background-color: lightblue;
             grid-gap:1em;
+            
+        }
+        .dadesV{
+            background-color: lightblue;
         }
 
         .formulari{
