@@ -1,87 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
-    <link rel="sylesheet" href="css/normalize.css">
-    <title>header</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
 
-    <style>
-        #h-cont{
-            display: grid;
-            grid-template-columns: auto 1fr auto;
-            align-content: center;
-            padding: 10px 16px 10px 60px;
-            background-color: #09aeee;
-        }
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-        #h-1{
-            justify-self: left;
-            align-self: center;
-            padding-left: 14px;
-            padding-right: 14px;
-            border-left: 1px solid black;
-            border-right: 1px solid black;
-        }
+.header {
+  overflow: hidden;
+  background-color: #6FD0EA;
+  padding: 20px 10px;
+}
 
-        #h-2{
-            align-self: end;
-            justify-self: left;
-            margin-left: 10px
-        }
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
 
-        h1{ margin-bottom: 0px;}
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
 
-        p{margin: 0px 0px 0px 0px}
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
 
-        .sp2{
-            font-weight: lighter;
-            font-size: 20px;
-        }
-        #d3{
-            justify-self: right;
-            align-self: center;
-        }
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
 
-    </style>
 
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+</style>
 </head>
-
-
 <body>
 
-<div id="h-cont" class="alert alert-secondary">
-    <div id="h-1">
-        <a href="inici.php"><img id="logo" src="img/logo.png"  width="70px"> </a>
-    </div>
-
-    <div id="h-2">
-        <h1 class="display-5">Cantina | Ins Pedralbes</h1>
-
-    </div>
-
-    <div id="h-3">
-
-    </div>
-
-    <div id="d3">
-                <span class="sp">
-                    <a href="https://www.instagram.com/inspedralbes/" class="link-dark"><i class="bi bi-instagram"></i></a>
-                </span>
-        <span class="sp">
-                    <a href="https://www.linkedin.com/school/institut-pedralbes" class="link-dark"><i class="bi bi-linkedin"></i></a>
-                </span>
-        <span>
-                    <a href="https://www.twitter.com/inspedralbes/" class="link-dark"><i class="bi bi-twitter"></i></a>
-                </span>
-    </div>
-
+<div class="header">
+  <a href="#default" class="logo"><a href="inici.php"><img id="logo" src="img/logo.png"  width="70px"> </a></a>
+  <div class="header-right">
+    <h1>Ins Pedralbes | Cantina</h1>
+    
+  </div>
 </div>
 
 
-</body>
 
+</body>
 </html>
