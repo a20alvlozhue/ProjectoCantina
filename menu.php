@@ -102,7 +102,7 @@ else {
 
 <div id='menutarda'>
 <?php
-                        $data = file_get_contents("json/menu.json");
+                        $data = file_get_contents("json/menuT.json");
                         $menuMati = json_decode($data, true);
                         mostrarProd25($menuMati);
 

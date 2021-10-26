@@ -1,30 +1,29 @@
 [{
 
-    "nom": "Panini",
-    "torn": "tarda",
-    "preu": "1.5",
-    "img": "img/panini.jpg",
-     "id": "9"
-  }, {
-  
-    "nom": "Patates",
-    "torn": "tarda",
-    "preu": "2",
-    "img": "img/pata.jpg",
-    "id": "10"
+  "nom": "Entrepa Bacon + Formatge",
+  "torn": "mati",
+  "preu": "2.90",
+  "img": "img/bq.jpg",
+   "id": "1"
+}, {
 
-  }, {
-  
-    "nom": "Frankfurt",
-    "torn": "tarda",
-    "preu": "2.90",
-    "img": "img/frank.jpg",
-     "id": "11"
-  }, {
-  
-    "nom": "Hamburguesa",
-    "torn": "tarda",
-    "preu": "3.50",
-    "img": "img/hamb.jpg",
-     "id": "12"
-  }]
+  "nom": "Entrepa Pernil",
+  "torn": "mati",
+  "preu": "2.90",
+  "img": "img/jamo.jpg",
+   "id": "2"
+}, {
+
+  "nom": "Entrepa Tonyina",
+  "torn": "mati",
+  "preu": "2.90",
+  "img": "img/mixto.jpg",
+  "id": "3"
+}, {
+
+  "nom": "Entrepa Sal",
+  "torn": "mati",
+  "preu": "2.90",
+  "img": "img/vegetal.jpg",
+  "id": "4"
+}]
