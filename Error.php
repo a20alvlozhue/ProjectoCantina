@@ -12,6 +12,9 @@
 	
 	<div id="MensajeTiendaNew">No se pueden hacer mas de dos compras en un mismo dia!!</div>
 
+	<form action="inici.php">
+        <input type="submit" name="boton" value="🡨">
+    </form>
 
 </body>
 </html>
