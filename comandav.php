@@ -22,17 +22,33 @@
 
 
 <div class="dades_comanda">
+                <div class="tit">
+                    <h2>Dades comanda</h2>
+                    <?php
 
-    <div class="dadesV">
+                            $data = file_get_contents('json/menu.json');
 
-       <h3>Dades comanda</h3>
-       
+                            $menuMati = json_decode($data, true);
+
+                            $total = 0;
+                            foreach ($_POST as $id => $value) {
+                                echo "hola";
+                                if ($value != 0) {
+                                    echo "Nombre de producto: " . $menuMati[$nom]["nom"] .
+                                    $total += $menuMati[$preu]["preu"] * $value;
+                                    $_SESSION["nom"] = $menuMati[$preu]["preu"];
+                                }
+                            }
+                            "<br><br>";
+                            echo "Preu Total de los productos: " . $total . "€";
+
+                        ?>
+                    
+                </div>
+            </div>
 
 
-    </div>
 
-
-    <!--Formulari Confirmació compra-->
 
     <form method="post" name="form" action="comandaf.php">
 

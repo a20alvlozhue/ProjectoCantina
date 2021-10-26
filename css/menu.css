@@ -1,3 +1,19 @@
+.btn-bootstrap {
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color .15s ease-in-out;
+  }
+  
+  .btn-bootstrap:hover, .btn-bootstrap:focus {
+    background-color: #0069d9;
+  }
+  
+  .btn-bootstrap:active {
+    background-color: #0062cc;
+}
+
 .foto{
     width: 200px;
 }
@@ -16,8 +32,8 @@ grid-template-rows: [r1] 1fr [r2] 2fr [r3];
 grid-template-columns: [c1] 1fr [c2] 1fr [c3] 1fr [c4];
 */
 
-grid-template:[r1] 1fr [r2] 7fr [r3]
-          / [c1] 1fr [c2] 1fr [c3] 1fr [c4] 1fr [c5] 1fr ;
+/*grid-template:[r1] 1fr [r2] 7fr [r3]
+          / [c1] 1fr [c2] 1fr [c3] 1fr [c4] 1fr [c5] 1fr ;*/
 grid-gap:1em;
 
 }
