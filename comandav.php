@@ -26,7 +26,7 @@
                     <h2>Dades comanda</h2>
                     <?php
 
-                            $data = file_get_contents('json/menu.json');
+                            $data = file_get_contents('js/menu.js');
 
                             $menuMati = json_decode($data, true);
 
