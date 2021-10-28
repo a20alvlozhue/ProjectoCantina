@@ -74,10 +74,10 @@ else {
                                                 <img src='.$prod["img"].' class="foto">
                                               </div>
                                               <div class="text">
-                                                <input type="button" id="quitar" class="quitar" value="-">
-                                                <span>'.$prod["nom"].  '</span><span> '.$prod["preu"].'€</span>
+                                                <input type="button" id="quitar" class="quitar btn btn-info border border-dark" value="-">
+                                                <span class="btn-info border border-dark"><span>'.$prod["nom"].  '</span><span> '.$prod["preu"].'€</span></span>
                                                 <input type="hidden"  value="0" name="'.$prod["id"].'" id="M'.$prod["id"].'">
-                                                <input type="button" id="añadir" class="añadir" value="+">
+                                                <input type="button" id="añadir" class="añadir btn btn-info border border-dark" value="+">
                                               </div></div>';
                                               echo "</br>";
                                     $var++;
@@ -122,13 +122,13 @@ else {
                                     }
                                     echo "<div class='gc".($var+1). " pr-grid'>";
                                         echo '<div class="img">
-                                                <img src='.$prod["img"].' class="foto">
+                                                <img src='.$prod["img"].' class="foto w-25 p-3 rounded" alt="...">
                                               </div>
                                               <div class="text">
-                                                <input type="button" id="quitar" class="quitar" value="-">
-                                                <span>'.$prod["nom"].  '</span><span> '.$prod["preu"].'€</span>
+                                                <input type="button" id="quitar" class="quitar btn btn-info border border-dark" value="-">
+                                                <span class="btn-info border border-dark"><span>'.$prod["nom"].  '</span><span> '.$prod["preu"].'€</span></span>
                                                 <input type="hidden" value="0"  name="'.$prod["id"].'" id="T'.$prod["id"].'">
-                                                <input type="button" id="añadir" class="añadir" value="+">
+                                                <input type="button" id="añadir" class="añadir btn btn-info border border-dark" value="+">
                                               </div></div>';                                          echo "</br>";
                                     $var++;
                                 }
