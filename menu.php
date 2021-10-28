@@ -135,16 +135,7 @@ else {
 
                             }
     ?>
-    </div>
-    </div>
-
-
-    </div>
-    </div>
-
-    <input type="submit" name="boton" class="btn btn-primary" value="Validació comanda">
-</form>
-<div class="ticket">
+    <div class="ticket">
                     <h3><b>Ticket</b></h3>
                     <ul>
                     <div id="carrito">
@@ -160,6 +151,17 @@ else {
        
         <script src="js/menu.js"></script>        
      
+    </div>
+    </div>
+
+
+    </div>
+    </div>
+    
+
+    <input type="submit" name="boton" class="btn btn-primary" value="Validació comanda">
+</form>
+
 
 <hr>
 <br></br>

@@ -59,7 +59,7 @@
 
 
     <form method="post" name="form" action="comandaf.php">
-
+                            
         <div class="formulari">
             <div class="form_cont">
                 <div class="d-print-flex p-2 bg-primary text-dark border border-dark border border-2 text-center bg-opacity-75 d-grid">

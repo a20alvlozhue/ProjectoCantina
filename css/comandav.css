@@ -21,8 +21,7 @@
 
         .formulari{
             display: grid;
-            align-items: center;
-            justify-items: left;
+          
             background-color: lightblue;
         }
 
@@ -32,3 +31,4 @@
             justify-content: center;
             align-items: center;
         }
+        
