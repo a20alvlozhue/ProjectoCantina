@@ -142,7 +142,7 @@ else {
 </div>
 </div>
 
-<input type="submit" name="boton" value="Validació comanda">
+<input type="submit" name="boton" class="btn btn-primary" value="Validació comanda">
 
 </form>
 <div class="ticket">
@@ -170,7 +170,7 @@ else {
   
 
     <form action="inici.php">
-        <input type="submit" name="boton" value="🡨">
+        <input type="submit" class="btn btn-primary" name="boton" value="🡨">
     </form>
 </div>
 
