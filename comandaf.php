@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <html>
 <head>
 
@@ -35,5 +39,12 @@ else {
 <form action="comandav.php">
     <input type="submit" name="boton" value="🡨">
 </form>
+<?php
+if (isset($_SESSION["preuTotal"]))
+{
+    echo "preu total: ". $_SESSION["preuTotal"];
+}
+
+?>
 </body>
 </html>

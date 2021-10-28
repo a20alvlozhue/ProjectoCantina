@@ -7,8 +7,6 @@
    
     <title>Validació comanda</title>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
 
     <link rel="stylesheet" href="css/comandav.css">
 </head>
@@ -24,16 +22,31 @@
 
 
 <div class="dades_comanda">
-                <div class="tit">
+                <div class="d-print-flex p-2 bg-primary text-dark border border-dark border border-2 text-center bg-opacity-75 d-grid">
                     <h2>Dades comanda</h2>
                     <?php
 
-                            $data = file_get_contents('json/menuM.json');
-
-                            $menuMati = json_decode($data, true);
+                            $productesMati = json_decode(file_get_contents('json/menuM.json'),true);
+                            $productesTarda = json_decode(file_get_contents('json/menuT.json'),true);
+                            $totsElsProductes = array_merge($productesMati,$productesTarda);
+                          //  print_r($totsElsProductes);
+                            $menu = $totsElsProductes;
 
                             $total = 0;
-                            
+                           // print_r($_POST);
+                            foreach ($_POST as $id => $cantidadProducto) {
+                                $key = array_search($id, array_column($menu, 'id'));
+                                if (intval($cantidadProducto) > 0 && $key > -1) {
+                                    echo "<p>Nombre de producto: " . $menu[$key]["nom"]. "</p>".
+                                    "<p>cantidad producto: " . $cantidadProducto . "</p>".
+                                    "<p>Precio: " . $menu[$key]["preu"]. "</p><hr>";
+
+                                    $total += $menu[$key]["preu"] * $cantidadProducto; //calcular precio total
+                                   // $_SESSION["nom"] = $menu[$key]["preu"];
+                                }
+                            }
+                            $_SESSION["preuTotal"] = $total;
+                            $data2 = file_get_contents('json/menuT.json');
                             "<br><br>";
                             echo "Preu Total de los productos: " . $total . "€";
 
@@ -42,32 +55,34 @@
                 </div>
             </div>
 
+
+
+
     <form method="post" name="form" action="comandaf.php">
 
-        <div>
+        <div class="formulari">
             <div class="form_cont">
-            <div class="d-print-flex p-2 bg-primary text-dark border border-dark border border-2 text-center bg-opacity-75 d-grid">
+                <div class="d-print-flex p-2 bg-primary text-dark border border-dark border border-2 text-center bg-opacity-75 d-grid">
             <h3>Formulari Validacio</h3>
                 <div>
-                    <label for="validationCustom01" class="form-label">Nom</label>
-                    <input name="name"  class="form-control" type="text" id="nom">
+                    <label for="name">Nom</label>
+                    <input name="name"  type="text" id="nom">
                 </div>
                 <br>
                 <div>
                     <label for="tlf">Telèfon</label>
-                    <input name="tlf" class="form-control" type="tel" id="tlf" placeholder="+34 000000000" width="10px">
+                    <input name="tlf"  type="tel" id="tlf" placeholder="+34 000000000" width="10px">
 
                 </div>
                 <br>
                 <div>
                     <label for="email">Correu electrònic </label>
-                    <input name="email" class="form-control" type="email" id="correu" maxlength="50" placeholder="nom@inspedralbes.cat" />
+                    <input name="email"  type="email" id="correu" maxlength="50" placeholder="nom@inspedralbes.cat" />
                 </div>
-            </div>
             </div>
             <br>
             <div class="sub">
-                <input type="submit" class="btn btn-primary" value="Comprar" id="submit">
+                <input type="submit" value="Comprar" id="submit">
             </div>
 
         </div>

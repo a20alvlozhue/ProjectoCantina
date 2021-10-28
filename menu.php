@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 //Si la cookie existe, nos envia a la pagina error.php
 
  if (isset($_COOKIE['Limitador'])){
@@ -39,111 +39,110 @@ else {
 ?>
 
 <form action="comandav.php" method="POST">
-<div id="totmati">
-<h1 class="h1menu">Menu Mati</h1>
-<div id="cuadricula">
-<div class="d-print-flex p-2 bg-primary text-dark border border-dark border border-2 text-center" style="--color:#2D9BE8;"><h3><b><u>Bocatas Freds</u></b></h3></div>
+    <div id="totmati">
+    <h1 class="h1menu">Menu Mati</h1>
+    <div id="cuadricula">
+    <div class="d-print-flex p-2 bg-primary text-dark border border-dark border border-2 text-center bg-opacity-75" style="--color:#2D9BE8;"><h3><b><u>Bocatas Freds</u></b></h3></div>
 
 
 
 
 
-<div class="d-print-flex p-2 bg-info text-dark border border-dark border border-2 text-center" style="--color:#6FD0EA;">
-<div id='menumati'>
-<?php
-                        $data = file_get_contents("json/menuM.json");
-                        $menuMati = json_decode($data, true);
-                        mostrarProd($menuMati);
 
-                        function mostrarProd($menuMati){                
-                            $var = 0;
-                            foreach ($menuMati as $prod) {
-                                if($var == 0){
-                                    echo "<div class='item".($var+1)."'></div>";
+    <div class="item" style="--color:#6FD0EA;">
+    <div id='menumati' class="d-print-flex p-2 bg-primary text-dark border border-dark border border-2 text-center bg-opacity-75">
+    <?php
+                            $data = file_get_contents("json/menuM.json");
+                            $menuMati = json_decode($data, true);
+                            mostrarProd($menuMati);
+
+                            function mostrarProd($menuMati){
+                                $var = 0;
+                                foreach ($menuMati as $prod) {
+                                    if($var == 0){
+                                        echo "<div class='item".($var+1)."'></div>";
+                                        $var++;
+                                    }else if ($var == 5){
+                                        echo "<div class='gc".($var+1)."'></div>";
+                                        $var++;
+                                    }else if($var == 10){
+                                        echo "<div class='item".($var+1)."'></div>";
+                                        $var++;
+                                    }
+                                    echo "<div class='gc".($var+1). " pr-grid'>";
+                                        echo '<div class="img">
+                                                <img src='.$prod["img"].' class="foto">
+                                              </div>
+                                              <div class="text">
+                                                <input type="button" id="quitar" class="quitar" value="-">
+                                                <span>'.$prod["nom"].  '</span><span> '.$prod["preu"].'€</span>
+                                                <input type="hidden"  value="0" name="'.$prod["id"].'" id="M'.$prod["id"].'">
+                                                <input type="button" id="añadir" class="añadir" value="+">
+                                              </div></div>';
+                                              echo "</br>";
                                     $var++;
-                                }else if ($var == 5){
-                                    echo "<div class='gc".($var+1)."'></div>";
-                                    $var++;
-                                }else if($var == 10){
-                                    echo "<div class='item".($var+1)."'></div>";
-                                    $var++;
-                                }         
-                                echo "<div class='gc".($var+1). " pr-grid'>";
-                                    echo '<div class="img">
-                                            <img src='.$prod["img"].' class="foto">
-                                          </div>
-                                          <div class="text">
-                                            <input type="button" id="quitar" class="quitar" value="-">
-                                            <span>'.$prod["nom"].  '</span><span> '.$prod["preu"].'€</span>
-                                            <input type="hidden"  value="0" name="'.$prod["id"].'" id="M'.$prod["id"].'">
-                                            <input type="button" id="añadir" class="añadir" value="+">
-                                          </div></div>';
-                                          echo "</br>";
-                                $var++; 
+                                }
+
                             }
-                            
-                        }
-                    ?>
-</div>   
+                        ?>
+    </div>
 
-</div>
+    </div>
 
-</p></div>
-</div>
-</div>
+    </p></div>
+    </div>
+    </div>
 
 
-<div id="tottarda">
-<h1>Menu Tarda</h1>
-<div id="cuadricula">
+    <div id="tottarda">
+    <h1>Menu Tarda</h1>
+    <div id="cuadricula">
 
-<div class="d-print-flex p-2 bg-primary text-dark border border-dark border border-2 text-center" style="--color:#2D9BE8;"><h3><b><u>Bocatas Calents</u></b></h3></div> 
+    <div class="d-print-flex p-2 bg-primary text-dark border border-dark border border-2 text-center bg-opacity-75" style="--color:#2D9BE8;"><h3><b><u>Bocatas Calents</u></b></h3></div>
 
 
-<div id='menutarda' class="d-print-flex p-2 bg-primary text-dark border border-dark border border-2 text-center">
-<?php
-                        $data = file_get_contents("json/menuT.json");
-                        $menuMati = json_decode($data, true);
-                        mostrarProd25($menuMati);
+    <div id='menutarda' class="d-print-flex p-2 bg-primary text-dark border border-dark border border-2 text-center bg-opacity-75">
+    <?php
+                            $data = file_get_contents("json/menuT.json");
+                            $menuMati = json_decode($data, true);
+                            mostrarProd25($menuMati);
 
-                        function mostrarProd25($menuMati){                
-                            $var = 0;
-                            foreach ($menuMati as $prod) {
-                                if($var == 0){
-                                    echo "<div class='item".($var+1)."'></div>";
+                            function mostrarProd25($menuMati){
+                                $var = 0;
+                                foreach ($menuMati as $prod) {
+                                    if($var == 0){
+                                        echo "<div class='item".($var+1)."'></div>";
+                                        $var++;
+                                    }else if ($var == 5){
+                                        echo "<div class='gc".($var+1)."'></div>";
+                                        $var++;
+                                    }else if($var == 10){
+                                        echo "<div class='item".($var+1)."'></div>";
+                                        $var++;
+                                    }
+                                    echo "<div class='gc".($var+1). " pr-grid'>";
+                                        echo '<div class="img">
+                                                <img src='.$prod["img"].' class="foto">
+                                              </div>
+                                              <div class="text">
+                                                <input type="button" id="quitar" class="quitar" value="-">
+                                                <span>'.$prod["nom"].  '</span><span> '.$prod["preu"].'€</span>
+                                                <input type="hidden" value="0"  name="'.$prod["id"].'" id="T'.$prod["id"].'">
+                                                <input type="button" id="añadir" class="añadir" value="+">
+                                              </div></div>';                                          echo "</br>";
                                     $var++;
-                                }else if ($var == 5){
-                                    echo "<div class='gc".($var+1)."'></div>";
-                                    $var++;
-                                }else if($var == 10){
-                                    echo "<div class='item".($var+1)."'></div>";
-                                    $var++;
-                                }         
-                                echo "<div class='gc".($var+1). " pr-grid'>";
-                                    echo '<div class="img">
-                                            <img src='.$prod["img"].' class="foto">
-                                          </div>
-                                          <div class="text">
-                                            <input type="button" id="quitar" class="quitar" value="-">
-                                            <span>'.$prod["nom"].  '</span><span> '.$prod["preu"].'€</span>
-                                            <input type="hidden" value="0"  name="'.$prod["id"].'" id="T'.$prod["id"].'">
-                                            <input type="button" id="añadir" class="añadir" value="+">
-                                          </div></div>';
-                                          echo "</br>";
-                                $var++; 
+                                }
+
                             }
-                            
-                        }
-                    ?>
-</div>   
-</div>
-                    </br>
+    ?>
+    </div>
+    </div>
 
-</div>
-</div>
 
-<input type="submit" name="boton" class="btn btn-primary" value="Validació comanda">
+    </div>
+    </div>
 
+    <input type="submit" name="boton" class="btn btn-primary" value="Validació comanda">
 </form>
 <div class="ticket">
                     <h3><b>Ticket</b></h3>
@@ -169,7 +168,7 @@ else {
 <div class="abajo">
   
 
-    <form action="index.php">
+    <form action="inici.php">
         <input type="submit" class="btn btn-primary" name="boton" value="🡨">
     </form>
 </div>
