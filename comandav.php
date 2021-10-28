@@ -33,14 +33,7 @@
                             $menuMati = json_decode($data, true);
 
                             $total = 0;
-                            foreach ($_POST as $id => $value) {
-                                echo "hola";
-                                if ($value != 0) {
-                                    echo "Nombre de producto: " . $menuMati[$nom]["nom"] .
-                                    $total += $menuMati[$preu]["preu"] * $value;
-                                    $_SESSION["nom"] = $menuMati[$preu]["preu"];
-                                }
-                            }
+                            
                             "<br><br>";
                             echo "Preu Total de los productos: " . $total . "€";
 
@@ -49,96 +42,32 @@
                 </div>
             </div>
 
-
-
-                <form class="row g-3 needs-validation" novalidate>
-    <div class="col-md-4">
-        <label for="validationCustom01" class="form-label">First name</label>
-        <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-        <div class="valid-feedback">
-        Looks good!
-        </div>
-    </div>
-    <div class="col-md-4">
-        <label for="validationCustom02" class="form-label">Last name</label>
-        <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-        <div class="valid-feedback">
-        Looks good!
-        </div>
-    </div>
-    <div class="col-md-4">
-        <label for="validationCustomUsername" class="form-label">Username</label>
-        <div class="input-group has-validation">
-        <span class="input-group-text" id="inputGroupPrepend">@</span>
-        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-        <div class="invalid-feedback">
-            Please choose a username.
-        </div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <label for="validationCustom03" class="form-label">City</label>
-        <input type="text" class="form-control" id="validationCustom03" required>
-        <div class="invalid-feedback">
-        Please provide a valid city.
-        </div>
-    </div>
-    <div class="col-md-3">
-        <label for="validationCustom04" class="form-label">State</label>
-        <select class="form-select" id="validationCustom04" required>
-        <option selected disabled value="">Choose...</option>
-        <option>...</option>
-        </select>
-        <div class="invalid-feedback">
-        Please select a valid state.
-        </div>
-    </div>
-    <div class="col-md-3">
-        <label for="validationCustom05" class="form-label">Zip</label>
-        <input type="text" class="form-control" id="validationCustom05" required>
-        <div class="invalid-feedback">
-        Please provide a valid zip.
-        </div>
-    </div>
-    <div class="col-12">
-        <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-        <label class="form-check-label" for="invalidCheck">
-            Agree to terms and conditions
-        </label>
-        <div class="invalid-feedback">
-            You must agree before submitting.
-        </div>
-        </div>
-    </div>
-    <div class="col-12">
-        <button class="btn btn-primary" type="submit">Submit form</button>
-    </div>
-    </form>
     <form method="post" name="form" action="comandaf.php">
 
-        <div class="formulari">
+        <div>
             <div class="form_cont">
+            <div class="d-print-flex p-2 bg-primary text-dark border border-dark border border-2 text-center bg-opacity-75 d-grid">
             <h3>Formulari Validacio</h3>
                 <div>
-                    <label for="name">Nom</label>
-                    <input name="name"  type="text" id="nom">
+                    <label for="validationCustom01" class="form-label">Nom</label>
+                    <input name="name"  class="form-control" type="text" id="nom">
                 </div>
                 <br>
                 <div>
                     <label for="tlf">Telèfon</label>
-                    <input name="tlf"  type="tel" id="tlf" placeholder="+34 000000000" width="10px">
+                    <input name="tlf" class="form-control" type="tel" id="tlf" placeholder="+34 000000000" width="10px">
 
                 </div>
                 <br>
                 <div>
                     <label for="email">Correu electrònic </label>
-                    <input name="email"  type="email" id="correu" maxlength="50" placeholder="nom@inspedralbes.cat" />
+                    <input name="email" class="form-control" type="email" id="correu" maxlength="50" placeholder="nom@inspedralbes.cat" />
                 </div>
+            </div>
             </div>
             <br>
             <div class="sub">
-                <input type="submit" value="Comprar" id="submit">
+                <input type="submit" class="btn btn-primary" value="Comprar" id="submit">
             </div>
 
         </div>
