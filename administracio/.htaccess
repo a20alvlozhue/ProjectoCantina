@@ -1,0 +1,5 @@
+#p
+AuthType Basic
+AuthName "Area de acceso restringido"
+AuthUserFile /home/a20alvlozhue/web/cantina8.inspedralbes.cat/public_html/administracio/.htpasswd
+require user pedralbes
