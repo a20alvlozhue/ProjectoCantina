@@ -42,13 +42,13 @@ else {
 <div id="totmati">
 <h1 class="h1menu">Menu Mati</h1>
 <div id="cuadricula">
-<div class="item" style="--color:#2D9BE8;"><h3><b><u>Bocatas Freds</u></b></h3></div>
+<div class="d-print-flex p-2 bg-primary text-dark border border-dark border border-2 text-center" style="--color:#2D9BE8;"><h3><b><u>Bocatas Freds</u></b></h3></div>
 
 
 
 
 
-<div class="item" style="--color:#6FD0EA;">
+<div class="d-print-flex p-2 bg-info text-dark border border-dark border border-2 text-center" style="--color:#6FD0EA;">
 <div id='menumati'>
 <?php
                         $data = file_get_contents("json/menuM.json");
@@ -97,10 +97,10 @@ else {
 <h1>Menu Tarda</h1>
 <div id="cuadricula">
 
-<div class="item" style="--color:#2D9BE8;"><h3><b><u>Bocatas Calents</u></b></h3></div>
+<div class="d-print-flex p-2 bg-primary text-dark border border-dark border border-2 text-center" style="--color:#2D9BE8;"><h3><b><u>Bocatas Calents</u></b></h3></div> 
 
 
-<div id='menutarda'>
+<div id='menutarda' class="d-print-flex p-2 bg-primary text-dark border border-dark border border-2 text-center">
 <?php
                         $data = file_get_contents("json/menuT.json");
                         $menuMati = json_decode($data, true);
@@ -137,7 +137,7 @@ else {
                     ?>
 </div>   
 </div>
-
+                    </br>
 
 </div>
 </div>
