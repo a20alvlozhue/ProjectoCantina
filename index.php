@@ -38,7 +38,7 @@ require_once('header.php');
 </br>
 <a href="menu.php" class="btn btn-primary">MENU</a>
 
-<form action="Administracio.php">
+<form action="administracio/Administracio.php">
     <br><br>
     <input type="submit" class="btn btn-primary" name="boton" value="Administracio">
 </form>
