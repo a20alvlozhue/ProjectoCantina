@@ -169,7 +169,7 @@ else {
 <div class="abajo">
   
 
-    <form action="inici.php">
+    <form action="index.php">
         <input type="submit" class="btn btn-primary" name="boton" value="🡨">
     </form>
 </div>
