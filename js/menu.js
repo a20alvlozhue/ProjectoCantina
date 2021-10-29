@@ -18,7 +18,7 @@ function horaMenu(){
 
     console.log(mati);
 
-    if(hora < 11  ){
+    if(hora > 11  ){
         tarda.style.display = "none";
 
         return mati;
@@ -55,7 +55,7 @@ document.getElementById("menutarda").addEventListener("click", function(e){
         document.getElementById(idProd).value++;
         if(typeof(element) != undefined && element != null){
             document.getElementById("preu"+idProd).innerHTML = parseInt(document.getElementById("preu"+idProd).innerHTML)+1;
-            document.getElementById(idProd).value = parseInt(document.getElementById(idProd).value)+1;
+            document.getElementById(idProd).value = parseInt(document.getElementById(idProd).value);
         }else{
             document.getElementById("carrito").insertAdjacentHTML("beforeend", "<p id=prod"+idProd+">"+nomProd+ " <span id=preu"+idProd+">1</span></p>");
         }
@@ -86,10 +86,10 @@ document.getElementById("menumati").addEventListener("click", function(e){
         element = document.getElementById("prod"+idProd);
         console.log(element)
         
-        
+        document.getElementById(idProd).value++;
         if(typeof(element) != 'undefined' && element != null){
             document.getElementById("preu"+idProd).innerHTML = parseInt(document.getElementById("preu"+idProd).innerHTML)+1;
-            document.getElementById(idProd).value = parseInt(document.getElementById(idProd).value)+1;
+            document.getElementById(idProd).value = parseInt(document.getElementById(idProd).value);
         }else{
             document.getElementById("carrito").insertAdjacentHTML("beforeend", "<p id=prod"+idProd+">"+nomProd+ " <span id=preu"+idProd+">1</span></p>");
         }
