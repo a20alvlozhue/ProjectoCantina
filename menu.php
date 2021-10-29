@@ -72,6 +72,14 @@ if (isset($_COOKIE['Limitador'])){
                                 }
                             }
                         ?>
+                        <div class="ticket">
+                        <h3><b>Ticket</b></h3>
+                        <ul>
+                        <div id="carrito">
+                        </div>
+                        </ul>
+                    <div>
+                    <h4>Total: <span id="total">0</span><span>€</span>
                     </div>
                 </div>
             </div>
