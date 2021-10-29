@@ -21,7 +21,7 @@ function horaMenu(){
 
     
 
-    if(hora < 11  ){
+    if(hora > 11  ){
        
         tarda.style.display = "none";
 

@@ -4,40 +4,40 @@
   "torn": "mati",
   "preu": "2.90",
   "img": "img/bq.jpg",
-   "id": "1"
+   "id": "9"
 }, {
 
   "nom": "Entrepa Pernil",
   "torn": "mati",
   "preu": "2.90",
   "img": "img/jamo.jpg",
-   "id": "2"
+   "id": "10"
 }, {
 
   "nom": "Entrepa Tonyina",
   "torn": "mati",
   "preu": "2.90",
   "img": "img/mixto.jpg",
-  "id": "3"
+  "id": "11"
 }, {
 
   "nom": "Entrepa Sal",
   "torn": "mati",
   "preu": "2.90",
   "img": "img/vegetal.jpg",
-  "id": "4"
+  "id": "12"
 }, {
 
   "nom": "Agua",
   "torn": "mati",
   "preu": "1",
   "img": "img/agua.jpg",
-  "id": "5"
+  "id": "13"
 },{
 
   "nom": "Cafe",
   "torn": "mati",
   "preu": "1.60",
   "img": "img/fanta.jpg",
-  "id": "6"
+  "id": "14"
 }]
