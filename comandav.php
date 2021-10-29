@@ -18,10 +18,10 @@
   **** Mostrar dades compra ****
 -->
 
-<h1 class="text-center">Validació comanda</h1>
+<h1>Validació comanda</h1>
 
 <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-4">
         <div class="dades_comanda">
                         <div class="d-print-flex p-2 bg-primary text-dark border border-dark border border-2 text-center bg-opacity-75 d-grid">
                             <h2>Dades comanda</h2>
@@ -58,10 +58,10 @@
     </div>                                
 
 
-    <div class="col-sm-6">                                
+    <div class="col-sm-4">                                
             <form method="post" name="form" action="comandaf.php">
                                     
-                <div">
+                <div class="formulari">
                     <div class="form_cont">
                         <div class="d-print-flex p-2 bg-primary text-dark border border-dark border border-2 text-center bg-opacity-75 d-grid">
                     <h3>Formulari Validacio</h3>
@@ -83,8 +83,9 @@
                     </div>
                     <br>
                     <div class="sub">
-                    <input type="submit" class="btn btn-success" value="Comprar" id="submit">
+                        <input type="submit" class="btn btn-success" value="Comprar" id="submit">
                     </div>
+
                 </div>
 
             </form>
