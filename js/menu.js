@@ -1,5 +1,5 @@
 
-window.onload = horaMenu(); 
+window.onload = horaMenu(); //
 
 
 
@@ -20,8 +20,9 @@ function horaMenu(){
     console.log(mati);
 
     
-    console.log(hora);
-    if(hora < 11  ){
+
+    if(hora > 11  ){
+       
         tarda.style.display = "none";
 
         return mati;
