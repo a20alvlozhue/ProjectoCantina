@@ -26,4 +26,18 @@
   "preu": "2.90",
   "img": "img/vegetal.jpg",
   "id": "4"
+}, {
+
+  "nom": "Agua",
+  "torn": "mati",
+  "preu": "1",
+  "img": "img/agua.jpg",
+  "id": "5"
+},{
+
+  "nom": "Cafe",
+  "torn": "mati",
+  "preu": "1.60",
+  "img": "img/fanta.jpg",
+  "id": "6"
 }]
