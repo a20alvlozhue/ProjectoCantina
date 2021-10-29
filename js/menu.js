@@ -6,6 +6,7 @@ window.onload = horaMenu();
 
 
 function horaMenu(){
+   
     let day = new Date();
     
     let hora = day.getHours();
@@ -20,7 +21,7 @@ function horaMenu(){
 
     
     console.log(hora);
-    if(hora > 11  ){
+    if(hora < 11  ){
         tarda.style.display = "none";
 
         return mati;
