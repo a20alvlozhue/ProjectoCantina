@@ -52,10 +52,9 @@ document.getElementById("menutarda").addEventListener("click", function(e){
         console.log(preuProd)
         console.log(element)
 
-        document.getElementById(idProd).value++;
+        document.getElementById(idProd).value = parseInt(document.getElementById(idProd).value)+1;
         if(typeof(element) != undefined && element != null){
-            document.getElementById("preu"+idProd).innerHTML = parseInt(document.getElementById("preu"+idProd).innerHTML)+1;
-            document.getElementById(idProd).value = parseInt(document.getElementById(idProd).value);
+            document.getElementById("preu"+idProd).innerHTML = parseInt(document.getElementById("preu"+idProd).innerHTML)+1; 
         }else{
             document.getElementById("carrito").insertAdjacentHTML("beforeend", "<p id=prod"+idProd+">"+nomProd+ " <span id=preu"+idProd+">1</span></p>");
         }
@@ -86,10 +85,9 @@ document.getElementById("menumati").addEventListener("click", function(e){
         element = document.getElementById("prod"+idProd);
         console.log(element)
         
-        document.getElementById(idProd).value++;
+        document.getElementById(idProd).value = parseInt(document.getElementById(idProd).value)+1;
         if(typeof(element) != 'undefined' && element != null){
-            document.getElementById("preu"+idProd).innerHTML = parseInt(document.getElementById("preu"+idProd).innerHTML)+1;
-            document.getElementById(idProd).value = parseInt(document.getElementById(idProd).value);
+            document.getElementById("preu"+idProd).innerHTML = parseInt(document.getElementById("preu"+idProd).innerHTML)+1;   
         }else{
             document.getElementById("carrito").insertAdjacentHTML("beforeend", "<p id=prod"+idProd+">"+nomProd+ " <span id=preu"+idProd+">1</span></p>");
         }
