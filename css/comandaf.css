@@ -1,0 +1,18 @@
+
+.TiquetHora{
+        width: 300px;
+        height: 300px;
+        border-style: solid;
+        position: relative;
+        border-width:2px; 
+        top:10%; 
+        margin-top:-52px; 
+        left: 6%;
+        margin-left:-52px;
+        text-align: center;
+
+}
+
+.Gracies{
+    color: green;
+}
