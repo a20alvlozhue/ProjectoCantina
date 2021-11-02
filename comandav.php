@@ -31,7 +31,8 @@
                     //  print_r($totsElsProductes);
                     $menu = $totsElsProductes;
                     $total = 0;
-                // print_r($_POST);
+                    //print_r($_POST);
+                    
                     foreach ($_POST as $id => $cantidadProducto) {
                         $key = array_search($id, array_column($menu, 'id'));
                         if (intval($cantidadProducto) > 0 && $key > -1) {

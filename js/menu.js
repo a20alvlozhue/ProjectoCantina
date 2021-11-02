@@ -1,13 +1,13 @@
 
-window.onload = horaMenu(); 
+window.onload = horaMenu(); //
 
 
 
 
 
 function horaMenu(){
+   
     let day = new Date();
-    
     let hora = day.getHours();
     let minuts= day.getMinutes() ;
 
@@ -18,8 +18,6 @@ function horaMenu(){
 
     console.log(mati);
 
-    
-    console.log(hora);
     if(hora > 11  ){
         tarda.style.display = "none";
 
@@ -29,6 +27,7 @@ function horaMenu(){
 
         return mati;
     }else {
+        console.log("test");
         mati.style.display ="none";
         return tarda;
     }
@@ -48,10 +47,14 @@ document.getElementById("menutarda").addEventListener("click", function(e){
         element = document.getElementById("prod"+idProd);
         
         console.log("IDPROD ES:::"+idProd)
-        document.getElementById(idProd).value++;
-        if(typeof(element) != 'undefined' && element != null){
-            document.getElementById("preu"+idProd).innerHTML++;
+        console.log(idProd)
+        console.log(nomProd)
+        console.log(preuProd)
+        console.log(element)
 
+        document.getElementById(idProd).value = parseInt(document.getElementById(idProd).value)+1;
+        if(typeof(element) != undefined && element != null){
+            document.getElementById("preu"+idProd).innerHTML = parseInt(document.getElementById("preu"+idProd).innerHTML)+1; 
         }else{
             document.getElementById("carrito").insertAdjacentHTML("beforeend", "<p id=prod"+idProd+">"+nomProd+ " <span id=preu"+idProd+">1</span></p>");
         }
@@ -63,7 +66,7 @@ document.getElementById("menutarda").addEventListener("click", function(e){
         var preuProd = e.target.parentElement.childNodes[4].innerHTML;
         element = document.getElementById("prod"+idProd);
         document.getElementById(idProd).value--;
-        if(typeof(element) != 'undefined' && element != null){
+        if(typeof(element) != undefined && element != null){
             document.getElementById("preu"+idProd).innerHTML--;
             document.getElementById("total").innerHTML = (parseFloat(document.getElementById("total").innerHTML) - (parseFloat(preuProd) )).toFixed(2);
             if(document.getElementById("preu"+idProd).innerHTML == 0){
@@ -80,8 +83,11 @@ document.getElementById("menumati").addEventListener("click", function(e){
         var nomProd = e.target.parentElement.childNodes[3].innerHTML;
         var preuProd = e.target.parentElement.childNodes[4].innerHTML; 
         element = document.getElementById("prod"+idProd);
+        console.log(element)
+        
+        document.getElementById(idProd).value = parseInt(document.getElementById(idProd).value)+1;
         if(typeof(element) != 'undefined' && element != null){
-            document.getElementById("preu"+idProd).innerHTML++;
+            document.getElementById("preu"+idProd).innerHTML = parseInt(document.getElementById("preu"+idProd).innerHTML)+1;   
         }else{
             document.getElementById("carrito").insertAdjacentHTML("beforeend", "<p id=prod"+idProd+">"+nomProd+ " <span id=preu"+idProd+">1</span></p>");
         }
