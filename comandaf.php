@@ -56,9 +56,30 @@ $DateAndTime = date('m-d-Y h:i:s a', time());
 echo "<b>Dia: $DateAndTime.</b>";
 echo "<hr>"
 
-session_start();
-echo $_SESSION["preuTotal"] =$total;
 
+$productesMati = json_decode(file_get_contents('json/menuM.json'),true);
+$productesTarda = json_decode(file_get_contents('json/menuT.json'),true);
+$totsElsProductes = array_merge($productesMati,$productesTarda);
+//  print_r($totsElsProductes);
+$menu = $totsElsProductes;
+
+$total = 0;
+// print_r($_POST);
+foreach ($_POST as $id => $cantidadProducto) {
+    $key = array_search($id, array_column($menu, 'id'));
+    if (intval($cantidadProducto) > 0 && $key > -1) {
+        echo "<p>Nombre de producto: " . $menu[$key]["nom"]. "</p>".
+        "<p>cantidad producto: " . $cantidadProducto . "</p>".
+        "<p>Precio: " . $menu[$key]["preu"]. "</p><hr>";
+
+        $total += $menu[$key]["preu"] * $cantidadProducto; //calcular precio total
+    // $_SESSION["nom"] = $menu[$key]["preu"];
+    }
+}
+$_SESSION["preuTotal"] = $total;
+$data2 = file_get_contents('json/menuT.json');
+"<br><br>";
+echo "<b>Preu Total de los productos: " . $total . "€</b>";
 ?>
 </div>
 </body>
