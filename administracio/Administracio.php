@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<SCRIPT  language=JavaScript> 
+<script  language=JavaScript> 
 function go(){
 
 if (document.form.password.value=='admin' && document.form.login.value=='admin'){ 
@@ -25,7 +25,7 @@ if (document.form.password.value=='admin' && document.form.login.value=='admin')
          alert("Porfavor ingrese, nombre de usuario y contraseña correctos."); 
     } 
 } 
-</SCRIPT> 
+</script> 
 <FORM name=form action="Administracio2.php">
 
 <P>Usuario:    <INPUT type=text name=login> 
