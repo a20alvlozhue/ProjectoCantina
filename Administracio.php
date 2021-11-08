@@ -27,5 +27,9 @@
     <br><br>
     <input type="submit" name="boton" value="Inici">
 </form>
+<form action="modificar.php">
+    <br><br>
+    <input type="submit" name="boton" value="Modificar producte">
+</form>
 </body>
 </html>
