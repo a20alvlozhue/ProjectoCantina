@@ -1,7 +1,7 @@
 <?php
-session_start();
-?>
-
+            session_start();
+           
+            ?>
 <html>
 <head>
 
@@ -39,26 +39,45 @@ else {
 <form action="comandav.php">
     <input type="submit" name="boton" value="🡨">
 </form>
-<?php
-if (isset($_SESSION["preuTotal"]))
-{
-    echo "preu total: ". $_SESSION["preuTotal"];
-}
 
-?>
-<div class="Gracies">
-<h1>Comanda correctament Enviada</h1>
-<h3>Moltes Gracies per la seva comanda</h3>
-</div>
+
 <div class="Tiquethora">
 <?php
 $DateAndTime = date('m-d-Y h:i:s a', time());  
 echo "<b>Dia: $DateAndTime.</b>";
 echo "<hr>"
-
-
+?>
+<div class="Gracies">
+<h1>Comanda correctament Enviada</h1>
+<h3>Moltes Gracies per la seva comanda</h3>
+</div>
+<?php
+if (isset($_SESSION["preuTotal"]))
+{
+    echo "Preu total: ". $_SESSION["preuTotal"];  
+	echo "€";
+}
 
 ?>
+<?php
+	$nombreFichero="comanda.txt";
+	$fh=fopen($nombreFichero,"a+") or die("Se produjo un error al crear el archivo");
+	
+	$texto = <<<_END
+		\n
+		Informacion del usuario:
+		Nombre: $_POST[name]
+		Telefono: $_POST[tlf]
+		Correo: $_POST[email]
+		Comanda: $_SESSION[preuTotal]€ 
+		<hr>
+	_END;
+
+	fwrite($fh, $texto);
+	fclose($fh);
+
+	session_destroy();
+	?>
 </div>
 </body>
 </html>

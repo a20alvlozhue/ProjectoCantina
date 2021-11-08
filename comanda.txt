@@ -1,0 +1,29 @@
+	
+
+	Informacion del usuario:
+	Nombre: q
+	Telefono: 147852369
+	Correo: nom@inspedralbes.cat
+	Comanda: 1€
+	<hr>	
+
+	Informacion del usuario:
+	Nombre: d
+	Telefono: 147852369
+	Correo: nom@inspedralbes.cat
+	Comanda: 2€
+	<hr>	
+
+	Informacion del usuario:
+	Nombre: ff
+	Telefono: 147852369
+	Correo: nom@inspedralbes.cat
+	Comanda: 4.8€ Array
+	<hr>	
+
+	Informacion del usuario:
+	Nombre: ff
+	Telefono: 147852369
+	Correo: nom@inspedralbes.cat
+	Comanda: € 
+	<hr>

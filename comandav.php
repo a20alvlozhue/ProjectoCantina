@@ -33,6 +33,7 @@
                     $total = 0;
                     //print_r($_POST);
                     
+                
                     foreach ($_POST as $id => $cantidadProducto) {
                         $key = array_search($id, array_column($menu, 'id'));
                         if (intval($cantidadProducto) > 0 && $key > -1) {
@@ -43,10 +44,14 @@
                             // $_SESSION["nom"] = $menu[$key]["preu"];
                         }
                     }
+                    session_start();
                     $_SESSION["preuTotal"] = $total;
+                    $_SESSION["key"] = $totsElsProductes;
                     $data2 = file_get_contents('json/menuT.json');
                     echo "<br><br>";
                     echo "<b>Preu Total de los productos: " . $total . "€</b>";
+
+                
                 ?>
                             
                 </div>

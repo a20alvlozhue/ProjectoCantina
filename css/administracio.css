@@ -1,0 +1,9 @@
+.t1{
+    position: relative;
+    top: 0px; left: 0px;
+    font: oblique bold 120% cursive;
+    background-color: rgb(250, 250, 250);
+    width: 15.3cm;
+    text-align: center;
+    box-sizing: border-box;
+}

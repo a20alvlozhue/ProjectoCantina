@@ -17,7 +17,7 @@ require_once('header.php');
     <a href="menu.php" class="btn btn-primary">MENU</a>
   </div>
   <div class="col-sm-1">
-    <form action="/adminstracio/Administracio.php">
+    <form action="Administracio.php">
         
         <input type="submit" class="btn btn-primary" name="boton" value="Administracio">
     </form>

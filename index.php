@@ -10,7 +10,19 @@ require_once('header.php');
 </head>
 <body>
 
-<h1>Inici</h1>
+<h1 class="text-center">Inici</h1>
+
+<div class="row">
+  <div class="col-sm-1">
+    <a href="menu.php" class="btn btn-primary">MENU</a>
+  </div>
+  <div class="col-sm-1">
+    <form action="Administracio.php">
+        
+        <input type="submit" class="btn btn-primary" name="boton" value="Administracio">
+    </form>
+  </div>
+</div>
 
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
@@ -19,10 +31,10 @@ require_once('header.php');
       <img src="img/desayuno1.png" class="d-block w-100" width="100px" alt="...">
     </div>
     <div class="carousel-item" data-bs-interval="2000">
-      <img src="img/desayuno2.png" class="d-block w-100" alt="...">
+      <img src="img/desayuno2.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="img/desayuno3.png" class="d-block w-100" alt="...">
+      <img src="img/desayuno3.jpg" class="d-block w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -36,12 +48,6 @@ require_once('header.php');
 </div>
 </div>
 </br>
-<a href="menu.php" class="btn btn-primary">MENU</a>
-
-<form action="administracio/Administracio.php">
-    <br><br>
-    <input type="submit" class="btn btn-primary" name="boton" value="Administracio">
-</form>
 
 <?php
 require_once('foother.php');
